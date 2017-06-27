@@ -1,0 +1,7 @@
+test
+data
+for
+command
+line
+from
+windows

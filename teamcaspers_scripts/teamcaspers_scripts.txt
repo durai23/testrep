@@ -1,0 +1,6 @@
+/data/Team_Caspers/freesurfer_tutorial/imcalc_v23.m
+#all scripts inside this folder
+/data/Team_Caspers/Schreiber/Home/dMRI_preproc
+
+
+

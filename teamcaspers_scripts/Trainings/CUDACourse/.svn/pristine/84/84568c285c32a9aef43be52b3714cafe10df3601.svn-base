@@ -1,0 +1,10 @@
+DGEMM Cuda Exercise - Tiled Matrix Multiplication
+--------------------------------------------------
+
+files: dgemm_tiled_streams.cu
+
+Add Cuda streams to your tiled matrix multiplication.
+
+
+--> make dgemm_tiled_streams
+--> ./dgemm_tiled_streams

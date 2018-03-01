@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SCRIBUSUTF8NEW Version="1.4.4">
+    <DOCUMENT ANZPAGES="1" PAGEWIDTH="841.89" PAGEHEIGHT="595.28" BORDERLEFT="40" BORDERRIGHT="40" BORDERTOP="40" BORDERBOTTOM="40" PRESET="0" BleedTop="0" BleedLeft="0" BleedRight="0" BleedBottom="0" ORIENTATION="1" PAGESIZE="A4" FIRSTNUM="1" BOOK="0" AUTOSPALTEN="1" ABSTSPALTEN="11" UNITS="0" DFONT="Arial Regular" DSIZE="12" DCOL="1" DGAP="0" TabFill="" TabWidth="36" AUTHOR="" COMMENTS="" KEYWORDS="" PUBLISHER="" DOCDATE="" DOCTYPE="" DOCFORMAT="" DOCIDENT="" DOCSOURCE="" DOCLANGINFO="" DOCRELATION="" DOCCOVER="" DOCRIGHTS="" DOCCONTRIB="" TITLE="" SUBJECT="" VHOCH="33" VHOCHSC="66" VTIEF="33" VTIEFSC="66" VKAPIT="75" BASEGRID="14.4" BASEO="0" AUTOL="20" UnderlinePos="-1" UnderlineWidth="-1" StrikeThruPos="-1" StrikeThruWidth="-1" GROUPC="1" HCMS="0" DPSo="0" DPSFo="0" DPuse="0" DPgam="0" DPbla="1" DPMo="Adobe RGB (1998)" DPPr="Europe ISO Coated FOGRA27" DPIn="Adobe RGB (1998)" DPInCMYK="Europe ISO Coated FOGRA27" DPIn2="Adobe RGB (1998)" DPIn3="Europe ISO Coated FOGRA27" DISc="1" DIIm="0" ALAYER="0" LANGUAGE="English" MINWORDLEN="3" HYCOUNT="2" AUTOMATIC="1" AUTOCHECK="0" GUIDELOCK="0" SnapToGuides="0" SnapToGrid="0" MINGRID="20" MAJGRID="100" SHOWGRID="0" SHOWGUIDES="1" showcolborders="1" SHOWFRAME="0" SHOWLAYERM="0" SHOWMARGIN="1" SHOWBASE="0" SHOWPICT="1" SHOWControl="0" SHOWLINK="0" rulerMode="1" showrulers="1" showBleed="1" rulerXoffset="0" rulerYoffset="0" GuideRad="10" GRAB="4" POLYC="4" POLYF="0.5" POLYR="0" POLYCUR="0" POLYFD="0" POLYS="0" AutoSave="1" AutoSaveTime="600000" ScratchBottom="20" ScratchLeft="100" ScratchRight="100" ScratchTop="20" GapHorizontal="0" GapVertical="40" StartArrow="0" EndArrow="0" PEN="Black" BRUSH="None" PENLINE="Black" PENTEXT="Black" StrokeText="Black" TextBackGround="None" TextLineColor="None" TextBackGroundShade="100" TextLineShade="100" TextPenShade="100" TextStrokeShade="100" STIL="1" STILLINE="1" WIDTH="1" WIDTHLINE="1" PENSHADE="100" LINESHADE="100" BRUSHSHADE="100" MAGMIN="10" MAGMAX="3200" MAGSTEP="200" CPICT="None" PICTSHADE="100" PICTSCX="1" PICTSCY="1" PSCALE="1" PASPECT="1" EmbeddedPath="0" HalfRes="1" dispX="10" dispY="10" constrain="15" MINORC="#00ff00" MAJORC="#00ff00" GuideC="#000080" BaseC="#c0c0c0" GuideZ="10" BACKG="1" PAGEC="#ffffff" MARGC="#0000ff" RANDF="0" currentProfile="PDF/X-3">
+        <CheckProfile Name="PDF 1.3" ignoreErrors="0" autoCheck="1" checkGlyphs="1" checkOrphans="1" checkOverflow="1" checkPictures="1" checkResolution="1" checkTransparency="1" minResolution="144" maxResolution="2400" checkAnnotations="0" checkRasterPDF="1" checkForGIF="1" ignoreOffLayers="0" checkOffConflictLayers="0"/>
+        <CheckProfile Name="PDF 1.4" ignoreErrors="0" autoCheck="1" checkGlyphs="1" checkOrphans="1" checkOverflow="1" checkPictures="1" checkResolution="1" checkTransparency="0" minResolution="144" maxResolution="2400" checkAnnotations="0" checkRasterPDF="1" checkForGIF="1" ignoreOffLayers="0" checkOffConflictLayers="0"/>
+        <CheckProfile Name="PDF 1.5" ignoreErrors="0" autoCheck="1" checkGlyphs="1" checkOrphans="1" checkOverflow="1" checkPictures="1" checkResolution="1" checkTransparency="0" minResolution="144" maxResolution="2400" checkAnnotations="0" checkRasterPDF="1" checkForGIF="1" ignoreOffLayers="0" checkOffConflictLayers="0"/>
+        <CheckProfile Name="PDF/X-3" ignoreErrors="0" autoCheck="1" checkGlyphs="1" checkOrphans="1" checkOverflow="1" checkPictures="1" checkResolution="1" checkTransparency="1" minResolution="144" maxResolution="2400" checkAnnotations="1" checkRasterPDF="1" checkForGIF="1" ignoreOffLayers="0" checkOffConflictLayers="0"/>
+        <CheckProfile Name="PostScript" ignoreErrors="0" autoCheck="1" checkGlyphs="1" checkOrphans="1" checkOverflow="1" checkPictures="1" checkResolution="1" checkTransparency="1" minResolution="144" maxResolution="2400" checkAnnotations="0" checkRasterPDF="1" checkForGIF="1" ignoreOffLayers="0" checkOffConflictLayers="0"/>
+        <COLOR NAME="Black" CMYK="#000000ff" Spot="0" Register="0"/>
+        <COLOR NAME="Blue" RGB="#0000ff" Spot="0" Register="0"/>
+        <COLOR NAME="Cool Black" CMYK="#990000ff" Spot="0" Register="0"/>
+        <COLOR NAME="Cyan" CMYK="#ff000000" Spot="0" Register="0"/>
+        <COLOR NAME="Green" RGB="#00ff00" Spot="0" Register="0"/>
+        <COLOR NAME="Juelich-blau" RGB="#005a84" Spot="0" Register="0"/>
+        <COLOR NAME="Magenta" CMYK="#00ff0000" Spot="0" Register="0"/>
+        <COLOR NAME="Red" RGB="#ff0000" Spot="0" Register="0"/>
+        <COLOR NAME="Registration" CMYK="#ffffffff" Spot="0" Register="1"/>
+        <COLOR NAME="Rich Black" CMYK="#996666ff" Spot="0" Register="0"/>
+        <COLOR NAME="Warm Black" CMYK="#00994cff" Spot="0" Register="0"/>
+        <COLOR NAME="White" CMYK="#00000000" Spot="0" Register="0"/>
+        <COLOR NAME="Yellow" CMYK="#0000ff00" Spot="0" Register="0"/>
+        <HYPHEN/>
+        <STYLE NAME="Default Paragraph Style" DefaultStyle="1" ALIGN="0" LINESPMode="0" LINESP="15" INDENT="0" RMARGIN="0" FIRST="0" VOR="0" NACH="0" DROP="0" DROPLIN="2" DROPDIST="0"/>
+        <STYLE NAME="Title" PARENT="Default Paragraph Style" CPARENT="Default Character Style" FONT="Arial Bold" FONTSIZE="24"/>
+        <STYLE NAME="Command" INDENT="6" FIRST="-6" FONT="Latin Modern Mono 12 Regular" LANGUAGE="English"/>
+        <STYLE NAME="Heading" PARENT="Default Paragraph Style" VOR="8" NACH="4" CPARENT="Default Character Style" FONT="Arial Bold"/>
+        <CHARSTYLE CNAME="Default Character Style" DefaultStyle="1" FONT="Arial Regular" FONTSIZE="12" FEATURES="inherit" FCOLOR="Black" FSHADE="100" SCOLOR="Black" SSHADE="100" TXTSHX="5" TXTSHY="-5" TXTOUT="1" TXTULP="-0.1" TXTULW="-0.1" TXTSTP="-0.1" TXTSTW="-0.1" SCALEH="100" SCALEV="100" BASEO="0" KERN="0" LANGUAGE="English"/>
+        <LAYERS NUMMER="0" LEVEL="0" NAME="Background" SICHTBAR="1" DRUCKEN="1" EDIT="1" FLOW="1" TRANS="1" BLEND="0" OUTL="0" LAYERC="#000000"/>
+        <Printer firstUse="0" toFile="0" useAltPrintCommand="0" outputSeparations="0" useSpotColors="1" useColor="1" mirrorH="0" mirrorV="0" useICC="0" doGCR="0" doClip="0" setDevParam="0" useDocBleeds="1" cropMarks="0" bleedMarks="0" registrationMarks="0" colorMarks="0" includePDFMarks="1" PSLevel="3" PDLanguage="3" markOffset="0" BleedTop="0" BleedLeft="0" BleedRight="0" BleedBottom="0" printer="zam06" filename="" separationName="All" printerCommand="">
+            <Separation Name="Cyan"/>
+            <Separation Name="Magenta"/>
+            <Separation Name="Yellow"/>
+            <Separation Name="Black"/>
+        </Printer>
+        <PDF firstUse="0" Thumbnails="0" Articles="0" Bookmarks="0" Compress="1" CMethod="0" Quality="0" EmbedPDF="0" MirrorH="0" MirrorV="0" Clip="0" RotateDeg="0" PresentMode="0" RecalcPic="0" Grayscale="0" RGBMode="1" UseProfiles="0" UseProfiles2="0" Binding="0" PicRes="300" Resolution="300" Version="14" Intent="1" Intent2="0" SolidP="Adobe RGB (1998)" ImageP="Adobe RGB (1998)" PrintP="Europe ISO Coated FOGRA27" InfoString="" BTop="0" BLeft="0" BRight="0" BBottom="0" useDocBleeds="1" cropMarks="0" bleedMarks="0" registrationMarks="0" colorMarks="0" docInfoMarks="0" markOffset="0" ImagePr="0" PassOwner="" PassUser="" Permissions="-4" Encrypt="0" UseLayers="0" UseLpi="0" UseSpotColors="1" doMultiFile="0" displayBookmarks="0" displayFullscreen="0" displayLayers="0" displayThumbs="0" hideMenuBar="0" hideToolBar="0" fitWindow="0" PageLayout="0" openAction="">
+            <Fonts Name="Arial Bold"/>
+            <Fonts Name="Arial Regular"/>
+            <Subset Name="Latin Modern Mono 12 Regular"/>
+            <Effekte pageEffectDuration="1" pageViewDuration="1" effectType="0" Dm="0" M="0" Di="0"/>
+            <LPI Color="" Frequency="10" Angle="0" SpotFunction="0"/>
+            <LPI Color="Black" Frequency="133" Angle="45" SpotFunction="3"/>
+            <LPI Color="Cyan" Frequency="133" Angle="105" SpotFunction="3"/>
+            <LPI Color="Magenta" Frequency="133" Angle="75" SpotFunction="3"/>
+            <LPI Color="Yellow" Frequency="133" Angle="90" SpotFunction="3"/>
+        </PDF>
+        <DocItemAttributes/>
+        <TablesOfContents/>
+        <PageSets>
+            <Set Name="Single Page" FirstPage="0" Rows="1" Columns="1"/>
+            <Set Name="Double Sided" FirstPage="1" Rows="1" Columns="2">
+                <PageNames Name="Left Page"/>
+                <PageNames Name="Right Page"/>
+            </Set>
+            <Set Name="3-Fold" FirstPage="0" Rows="1" Columns="3">
+                <PageNames Name="Left Page"/>
+                <PageNames Name="Middle"/>
+                <PageNames Name="Right Page"/>
+            </Set>
+            <Set Name="4-Fold" FirstPage="0" Rows="1" Columns="4">
+                <PageNames Name="Left Page"/>
+                <PageNames Name="Middle Left"/>
+                <PageNames Name="Middle Right"/>
+                <PageNames Name="Right Page"/>
+            </Set>
+        </PageSets>
+        <Sections>
+            <Section Number="0" Name="0" From="0" To="0" Type="Type_1_2_3" Start="1" Reversed="0" Active="1"/>
+        </Sections>
+        <MASTERPAGE PAGEXPOS="100" PAGEYPOS="20" PAGEWIDTH="841.89" PAGEHEIGHT="595.28" BORDERLEFT="40" BORDERRIGHT="40" BORDERTOP="40" BORDERBOTTOM="40" NUM="0" NAM="Normal" MNAM="" Size="A4" Orientation="1" LEFT="0" PRESET="0" VerticalGuides="" HorizontalGuides="" AGhorizontalAutoGap="0" AGverticalAutoGap="0" AGhorizontalAutoCount="0" AGverticalAutoCount="0" AGhorizontalAutoRefer="0" AGverticalAutoRefer="0" AGSelection="0 0 0 0"/>
+        <PAGE PAGEXPOS="100" PAGEYPOS="20" PAGEWIDTH="841.89" PAGEHEIGHT="595.28" BORDERLEFT="40" BORDERRIGHT="40" BORDERTOP="40" BORDERBOTTOM="40" NUM="0" NAM="" MNAM="Normal" Size="A4" Orientation="1" LEFT="0" PRESET="0" VerticalGuides="" HorizontalGuides="" AGhorizontalAutoGap="0" AGverticalAutoGap="0" AGhorizontalAutoCount="0" AGverticalAutoCount="0" AGhorizontalAutoRefer="0" AGverticalAutoRefer="0" AGSelection="0 0 0 0"/>
+        <PAGEOBJECT OwnPage="0" PTYPE="4" XPOS="140" YPOS="69.6494845360825" WIDTH="761.113402061856" HEIGHT="31" RADRECT="4" FRTYPE="2" CLIPEDIT="0" PWIDTH="1" PCOLOR="Juelich-blau" PCOLOR2="None" TXTFILL="White" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="100" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="2" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="32" POCOOR="4 0 4 0 757.113 0 757.113 0 757.113 0 759.323 0 761.113 4 761.113 2.20914 761.113 4 761.113 4 761.113 27 761.113 27 761.113 27 761.113 29.2091 757.113 31 759.323 31 757.113 31 757.113 31 4 31 4 31 4 31 2.20914 31 0 27 0 29.2091 0 27 0 27 0 4 0 4 0 4 0 2.20914 4 0 2.20914 0 " NUMCO="32" COCOOR="4 0 4 0 757.113 0 757.113 0 757.113 0 759.323 0 761.113 4 761.113 2.20914 761.113 4 761.113 4 761.113 27 761.113 27 761.113 27 761.113 29.2091 757.113 31 759.323 31 757.113 31 757.113 31 4 31 4 31 4 31 2.20914 31 0 27 0 29.2091 0 27 0 27 0 4 0 4 0 4 0 2.20914 4 0 2.20914 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="0" BOOKMARK="0" NEXTITEM="-1" BACKITEM="-1">
+            <ITEXT FCOLOR="White" CH="GPU Course Cheat Sheet"/>
+            <trail PARENT="Title"/>
+            <PageItemAttributes/>
+        </PAGEOBJECT>
+        <PAGEOBJECT OwnPage="0" PTYPE="4" XPOS="138.360824742268" YPOS="119.505154639175" WIDTH="225" HEIGHT="445.494845360825" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="None" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="100" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 225 0 225 0 225 0 225 0 225 445.495 225 445.495 225 445.495 225 445.495 0 445.495 0 445.495 0 445.495 0 445.495 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 225 0 225 0 225 0 225 0 225 445.495 225 445.495 225 445.495 225 445.495 0 445.495 0 445.495 0 445.495 0 445.495 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="0" BOOKMARK="0" NEXTITEM="-1" BACKITEM="-1">
+            <ITEXT CH="Workstations"/>
+            <para PARENT="Heading"/>
+            <ITEXT CH="Logging in"/>
+            <para PARENT="Heading"/>
+            <ITEXT CH="Username: "/>
+            <ITEXT FONT="Latin Modern Mono 12 Regular" CH="train0??"/>
+            <ITEXT CH=", where ?? is the number assigned to you."/>
+            <para PARENT="Default Paragraph Style"/>
+            <ITEXT CH="Password: 20Patc-CUDA16!"/>
+            <para PARENT="Default Paragraph Style"/>
+            <ITEXT CH="Editing"/>
+            <para PARENT="Heading"/>
+            <ITEXT CH="kate provides remote editing. Use sftp://jureca/homea/hpclab/train0?? to access your files on JURECA and edit them locally."/>
+            <para PARENT="Default Paragraph Style"/>
+            <ITEXT CH="Command line"/>
+            <para PARENT="Heading"/>
+            <ITEXT CH="A lot of our work will be done on the command line. You can start a terminal window using &lt;ALT&gt;+&lt;F2&gt; (opens a window to enter commands) and then type konsole"/>
+            <para PARENT="Default Paragraph Style"/>
+            <ITEXT CH="A few commands"/>
+            <para PARENT="Heading"/>
+            <ITEXT FONT="Latin Modern Mono 12 Regular" CH="cd &lt;dir&gt;"/>
+            <ITEXT CH=" - switches the working directory to &lt;dir&gt;"/>
+            <para PARENT="Default Paragraph Style"/>
+            <ITEXT FONT="Latin Modern Mono 12 Regular" CH="ls"/>
+            <ITEXT CH=" - lists files in current directory"/>
+            <para PARENT="Default Paragraph Style"/>
+            <ITEXT FONT="Latin Modern Mono 12 Regular" FEATURES="inherit" CH="ls -l"/>
+            <ITEXT CH=" - same as "/>
+            <ITEXT FONT="Latin Modern Mono 12 Regular" CH="ls"/>
+            <ITEXT CH=" but gives more detail"/>
+            <para PARENT="Default Paragraph Style"/>
+            <ITEXT FONT="Latin Modern Mono 12 Regular" CH="mkdir -p &lt;dir1&gt;/&lt;dir2&gt;"/>
+            <ITEXT CH=" - creates a new (subdirectory&gt; &lt;dir1&gt;/&lt;dir2&gt;"/>
+            <para PARENT="Default Paragraph Style"/>
+            <ITEXT FONT="Latin Modern Mono 12 Regular" CH="rm &lt;file&gt;"/>
+            <ITEXT CH=" - deletes (removes) a file. Cannot be undone!"/>
+            <para PARENT="Default Paragraph Style"/>
+            <ITEXT FONT="Latin Modern Mono 12 Regular" CH="less &lt;file&gt;"/>
+            <ITEXT CH=" - shows the context of a file."/>
+            <para PARENT="Default Paragraph Style"/>
+            <PageItemAttributes/>
+        </PAGEOBJECT>
+        <PAGEOBJECT OwnPage="0" PTYPE="4" XPOS="367.36082474" YPOS="119.50515464" WIDTH="225" HEIGHT="446.49484536" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="None" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="100" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 225 0 225 0 225 0 225 0 225 446.495 225 446.495 225 446.495 225 446.495 0 446.495 0 446.495 0 446.495 0 446.495 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 225 0 225 0 225 0 225 0 225 446.495 225 446.495 225 446.495 225 446.495 0 446.495 0 446.495 0 446.495 0 446.495 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="0" BOOKMARK="0" NEXTITEM="-1" BACKITEM="-1">
+            <ITEXT CH="JURECA"/>
+            <para PARENT="Heading"/>
+            <ITEXT CH="Logging in:"/>
+            <para PARENT="Heading"/>
+            <ITEXT FONT="Arial Regular" CH="Type"/>
+            <ITEXT CH=" ssh-add "/>
+            <ITEXT FONT="Arial Regular" CH="then"/>
+            <ITEXT CH=" 20Patc-CUDA16!"/>
+            <para PARENT="Command"/>
+            <ITEXT CH="ssh jureca.fz-juelich.de"/>
+            <para PARENT="Command"/>
+            <ITEXT CH="Setting up the environment"/>
+            <para PARENT="Heading"/>
+            <ITEXT CH="Several compilers are available. To get a list use the module command"/>
+            <para/>
+            <ITEXT CH="module avail "/>
+            <para PARENT="Command"/>
+            <ITEXT CH="To load CUDA first load a toolchain, e.g, "/>
+            <para/>
+            <ITEXT CH="module load intel-para"/>
+            <para PARENT="Command"/>
+            <ITEXT CH="and then the module"/>
+            <para/>
+            <ITEXT CH="module load CUDA/7.5.18"/>
+            <para PARENT="Command"/>
+            <ITEXT CH="Accessing a compute node"/>
+            <para PARENT="Heading"/>
+            <ITEXT CH="The frontend nodes can be used for development but to run your code on a GPU you need to access one of the compute nodes. To get a node with four GPUs for 8 hours use"/>
+            <para/>
+            <ITEXT CH="salloc --reservation=cuda -p gpus  --nodes=1 --gres=gpu:4 --time=8:0:0"/>
+            <para PARENT="Command"/>
+            <ITEXT CH="After some time you are returned to the prompt. To run a program on the compute node start it with "/>
+            <para/>
+            <ITEXT CH="srun &lt;executable&gt;"/>
+            <para PARENT="Command"/>
+            <ITEXT CH="To start an interactive session use"/>
+            <para/>
+            <ITEXT CH="srun --forward-x --cpu_bind=none --pty /bin/bash -i"/>
+            <trail PARENT="Command"/>
+            <PageItemAttributes/>
+        </PAGEOBJECT>
+        <PAGEOBJECT OwnPage="0" PTYPE="4" XPOS="601.587628865979" YPOS="118.50515464" WIDTH="302.010309278351" HEIGHT="367.49484536" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="None" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="100" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 302.01 0 302.01 0 302.01 0 302.01 0 302.01 367.495 302.01 367.495 302.01 367.495 302.01 367.495 0 367.495 0 367.495 0 367.495 0 367.495 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 302.01 0 302.01 0 302.01 0 302.01 0 302.01 367.495 302.01 367.495 302.01 367.495 302.01 367.495 0 367.495 0 367.495 0 367.495 0 367.495 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="0" BOOKMARK="0" NEXTITEM="-1" BACKITEM="-1">
+            <ITEXT CH="Allocate memory on device"/>
+            <para PARENT="Heading"/>
+            <ITEXT CH="cudaMallocManaged(T** pointer, size_t nbytes)"/>
+            <para PARENT="Command"/>
+            <ITEXT CH="cudaMalloc(T** pointer, size_t nbytes)"/>
+            <para PARENT="Command"/>
+            <ITEXT CH="Free memory on device"/>
+            <para PARENT="Heading"/>
+            <ITEXT CH="cudaFree(pointer)"/>
+            <para PARENT="Command"/>
+            <ITEXT CH="Transfer data"/>
+            <para PARENT="Heading"/>
+            <ITEXT CH="cudaMemcpy(void* dst, void* src, size_t nbytes, enum cudaMemcpyKind dir)"/>
+            <para PARENT="Command"/>
+            <ITEXT CH="Directions can be one of"/>
+            <para PARENT="Default Paragraph Style"/>
+            <ITEXT CH="cudaMemcpyHostToDevice, cudaMemcpyDeviceToHost, cudaMemcpyDeviceToDevice, cudaMemcpyDefault"/>
+            <para PARENT="Command"/>
+            <ITEXT CH="Call kernel"/>
+            <para PARENT="Heading"/>
+            <ITEXT CH="kernel_name&lt;&lt;&lt;dim3 grid, dim3 block&gt;&gt;&gt;([args])"/>
+            <para PARENT="Command"/>
+            <ITEXT CH="CUDA kernel"/>
+            <para PARENT="Heading"/>
+            <ITEXT CH="__global__ void kernel_name([args]) {...} "/>
+            <ITEXT FONT="Arial Regular" CH="- kernel function"/>
+            <para PARENT="Command"/>
+            <ITEXT CH="__device__ void device_function([args]) {...} "/>
+            <ITEXT FONT="Arial Regular" CH="- function that can be called from kernel"/>
+            <para PARENT="Command"/>
+            <ITEXT CH="__shared__ - fast on-chip memory"/>
+            <para PARENT="Command"/>
+            <ITEXT CH="All kernel functions have access to"/>
+            <para PARENT="Default Paragraph Style"/>
+            <ITEXT CH="dim3 gridDim, blockDim, blockIdx, threadIdx"/>
+            <trail PARENT="Command"/>
+            <PageItemAttributes/>
+        </PAGEOBJECT>
+        <PAGEOBJECT OwnPage="0" PTYPE="4" XPOS="600" YPOS="136.855670103093" WIDTH="179.259259259259" HEIGHT="13.144329896907" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="None" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="100" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="1" ANTYPE="11" ANACTION="" ANEACT="" ANXACT="" ANDACT="" ANFOACT="" ANBLACT="" ANKACT="" ANFACT="" ANVACT="" ANCACT="" ANEXTERN="http://docs.nvidia.com/cuda/index.html" ANZIEL="0" ANACTYP="8" ANTOOLTIP="" ANBWID="1" ANBSTY="0" ANFEED="1" ANFLAG="0" ANFONT="4" ANFORMAT="0" ANROLL="" ANDOWN="" ANVIS="0" ANMC="-1" ANCHK="0" ANAA="0" ANCHKS="0" ANBCOL="None" ANHTML="0" ANICON="0" ANPLACE="1" ANSCALE="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 179.259 0 179.259 0 179.259 0 179.259 0 179.259 13.1443 179.259 13.1443 179.259 13.1443 179.259 13.1443 0 13.1443 0 13.1443 0 13.1443 0 13.1443 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 179.259 0 179.259 0 179.259 0 179.259 0 179.259 13.1443 179.259 13.1443 179.259 13.1443 179.259 13.1443 0 13.1443 0 13.1443 0 13.1443 0 13.1443 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="0" BOOKMARK="0" NEXTITEM="-1" BACKITEM="-1">
+            <trail/>
+            <PageItemAttributes/>
+        </PAGEOBJECT>
+        <PAGEOBJECT OwnPage="0" PTYPE="4" XPOS="140" YPOS="566.237113402062" WIDTH="761.1134021" HEIGHT="18.4123711379382" RADRECT="4" FRTYPE="2" CLIPEDIT="0" PWIDTH="1" PCOLOR="Juelich-blau" PCOLOR2="None" TXTFILL="White" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="100" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="2" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="32" POCOOR="4 0 4 0 757.113 0 757.113 0 757.113 0 759.323 0 761.113 4 761.113 2.20914 761.113 4 761.113 4 761.113 14.4124 761.113 14.4124 761.113 14.4124 761.113 16.6215 757.113 18.4124 759.323 18.4124 757.113 18.4124 757.113 18.4124 4 18.4124 4 18.4124 4 18.4124 2.20914 18.4124 0 14.4124 0 16.6215 0 14.4124 0 14.4124 0 4 0 4 0 4 0 2.20914 4 0 2.20914 0 " NUMCO="32" COCOOR="4 0 4 0 757.113 0 757.113 0 757.113 0 759.323 0 761.113 4 761.113 2.20914 761.113 4 761.113 4 761.113 14.4124 761.113 14.4124 761.113 14.4124 761.113 16.6215 757.113 18.4124 759.323 18.4124 757.113 18.4124 757.113 18.4124 4 18.4124 4 18.4124 4 18.4124 2.20914 18.4124 0 14.4124 0 16.6215 0 14.4124 0 14.4124 0 4 0 4 0 4 0 2.20914 4 0 2.20914 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="0" BOOKMARK="0" NEXTITEM="-1" BACKITEM="-1">
+            <ITEXT FONTSIZE="10" FCOLOR="White" CH="Jan H. Meinke &lt;j.meinke@fz-juelich.de&gt;, Jülich Supercomputing Centre, Forschungszentrum Jülich GmbH, Jülich, Germany"/>
+            <trail/>
+            <PageItemAttributes/>
+        </PAGEOBJECT>
+        <PAGEOBJECT OwnPage="0" PTYPE="4" XPOS="603" YPOS="512.84" WIDTH="287.8" HEIGHT="52.5599999999999" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="None" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="100" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 287.8 0 287.8 0 287.8 0 287.8 0 287.8 52.56 287.8 52.56 287.8 52.56 287.8 52.56 0 52.56 0 52.56 0 52.56 0 52.56 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 287.8 0 287.8 0 287.8 0 287.8 0 287.8 52.56 287.8 52.56 287.8 52.56 287.8 52.56 0 52.56 0 52.56 0 52.56 0 52.56 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="0" BOOKMARK="0" NEXTITEM="-1" BACKITEM="-1">
+            <ITEXT CH="CUDA Documentation"/>
+            <para PARENT="Heading"/>
+            <ITEXT CH="You can find lots of documentation at the Nvidia web page: http://docs.nvidia.com/cuda/index.html"/>
+            <para PARENT="Default Paragraph Style"/>
+            <PageItemAttributes/>
+        </PAGEOBJECT>
+        <PAGEOBJECT OwnPage="0" PTYPE="4" XPOS="635.6" YPOS="544" WIDTH="208.8" HEIGHT="15.64" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="None" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="100" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="1" ANTYPE="11" ANACTION="" ANEACT="" ANXACT="" ANDACT="" ANFOACT="" ANBLACT="" ANKACT="" ANFACT="" ANVACT="" ANCACT="" ANEXTERN="http://docs.nvidia.com/cuda/index.html" ANZIEL="0" ANACTYP="8" ANTOOLTIP="" ANBWID="1" ANBSTY="0" ANFEED="1" ANFLAG="0" ANFONT="4" ANFORMAT="0" ANROLL="" ANDOWN="" ANVIS="0" ANMC="-1" ANCHK="0" ANAA="0" ANCHKS="0" ANBCOL="Black" ANHTML="0" ANICON="0" ANPLACE="1" ANSCALE="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 208.8 0 208.8 0 208.8 0 208.8 0 208.8 15.64 208.8 15.64 208.8 15.64 208.8 15.64 0 15.64 0 15.64 0 15.64 0 15.64 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 208.8 0 208.8 0 208.8 0 208.8 0 208.8 15.64 208.8 15.64 208.8 15.64 208.8 15.64 0 15.64 0 15.64 0 15.64 0 15.64 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="0" BOOKMARK="0" NEXTITEM="-1" BACKITEM="-1">
+            <trail/>
+            <PageItemAttributes/>
+        </PAGEOBJECT>
+    </DOCUMENT>
+</SCRIBUSUTF8NEW>

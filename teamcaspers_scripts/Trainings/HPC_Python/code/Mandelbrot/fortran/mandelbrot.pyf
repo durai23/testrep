@@ -1,0 +1,27 @@
+!    -*- f90 -*-
+! Note: the context of this file is case sensitive.
+
+python module mandelbrot_f ! in 
+    interface  ! in :mandelbrot_f
+        module mandelbrot ! in :mandelbrot_f:mandelbrot.f90
+            complex allocatable,dimension(:) :: q
+            integer :: maximumnumberofiterations
+            integer allocatable,dimension(:) :: iterations
+            integer :: numberofpoints
+            subroutine init(minrealvalue,maxrealvalue,minimagvalue,maximagvalue,xres,yres,maxiter) ! in :mandelbrot_f:mandelbrot.f90:mandelbrot
+                real intent(in) :: minrealvalue
+                real intent(in) :: maxrealvalue
+                real intent(in) :: minimagvalue
+                real intent(in) :: maximagvalue
+                integer intent(in) :: xres
+                integer intent(in) :: yres
+                integer intent(in) :: maxiter
+            end subroutine init
+            subroutine calculate ! in :mandelbrot_f:mandelbrot.f90:mandelbrot
+            end subroutine calculate
+        end module mandelbrot
+    end interface 
+end python module mandelbrot_f
+
+! This file was auto-generated with f2py (version:1).
+! See http://cens.ioc.ee/projects/f2py2e/

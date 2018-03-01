@@ -1,0 +1,10 @@
+recon-all -subject 998331_para_1 -i 998331_V1/T1.nii -all -time 
+recon-all -subject 998331_para_2 -i 998331_V1/T1.nii -all -time
+recon-all -subject 998331_para_3 -i 998331_V1/T1.nii -all -time 
+recon-all -subject 998331_para_4 -i 998331_V1/T1.nii -all -time
+recon-all -subject 998331_para_5 -i 998331_V1/T1.nii -all -time 
+recon-all -subject 998331_para_6 -i 998331_V1/T1.nii -all -time
+recon-all -subject 998331_para_7 -i 998331_V1/T1.nii -all -time 
+recon-all -subject 998331_para_8 -i 998331_V1/T1.nii -all -time
+recon-all -subject 998331_para_9 -i 998331_V1/T1.nii -all -time 
+recon-all -subject 998331_para_10 -i 998331_V1/T1.nii -all -time

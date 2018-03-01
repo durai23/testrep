@@ -1,0 +1,29 @@
+DGEMM Cuda Exercise - Simple GPU implementation
+-----------------------------------------------
+
+files: dgemm_gpu_simple_uvm.cu, dgemm_gpu_simple.cu
+
+a) Implement DGEMM with cuda. Compile and run the program:
+
+   --> make dgemm_gpu_simple_uvm
+   --> CUDA_MANAGED_FORCE_DEVICE_ALLOC=1 ./dgemm_gpu_simple_uvm
+
+   Run your program with different matrix sizes (can be specified as
+   command line parameter) and take a look at the resulting performance.
+
+b) Replace the register variable ``Cvalue`` with direct access to the
+   global memoray array (``c[...]``). Do not forget to initialize
+   c[..]. How does this change affect the execution time ? 
+
+c) Implement DGEMM with cuda using explicit data transfers. Compile
+   and run the program: 
+
+   --> make dgemm_gpu_simple
+   --> ./dgemm_gpu_simple 
+
+   Run your program with different matrix sizes (can be specified as
+   command line parameter) and take a look at the resulting
+   performance. Compare the results with the UVM version of your
+   program (with and without CUDA_MANAGED_FORCE_DEVICE_ALLOC
+   parameter set)
+  

@@ -1,0 +1,17 @@
+DGEMM Cuda Exercise - Shared memory implementation
+--------------------------------------------------
+
+files: dgemm_gpu_shared_uvm.cu, dgemm_gpu_shared.cu
+
+Implement DGEMM with Cuda using shared memory. Compare the performance
+results with your simple Cuda implementation for different matrix sizes.
+
+--> make dgemm_gpu_shared_uvm
+--> CUDA_MANAGED_FORCE_DEVICE_ALLOC=1 ./dgemm_gpu_shared_uvm
+
+and compare the performance with the previous runs.
+
+... if there is time left:
+
+Include explicit data transfers (using cudaMemcpy) instead of using
+UVM and compare the performance numbers with your UVM implementation

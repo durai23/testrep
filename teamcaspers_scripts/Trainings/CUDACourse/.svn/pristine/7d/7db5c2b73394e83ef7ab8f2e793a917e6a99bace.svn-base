@@ -1,0 +1,12 @@
+DGEMM Cuda Exercise - Tiled Matrix Multiplication
+--------------------------------------------------
+
+files: dgemm_tiled.cu
+
+Implement DGEMM with Cuda doing a tiled matrix multiplication using
+cuBlas library. Test your program with different matrix (n) and tile
+sizes (m), where n has to be divisible by m. 
+
+
+--> make dgemm_tiled
+--> ./dgemm_tiled

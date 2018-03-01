@@ -1,0 +1,14 @@
+DGEMM Cuda Exercise - Simple CPU implementation
+-----------------------------------------------
+
+files: dgemm_cpu_simple.cu
+
+Take a look at the DGEMM CPU implementation. Activate the Cuda timing
+by uncommenting the corresponding lines (marked with "TODO"). Compile
+and run the program using 
+
+--> make dgemm_cpu_simple
+--> ./dgemm_cpu_simple 
+
+Hint: Do not start the program on the login node, otherwise the timing
+      will fail.

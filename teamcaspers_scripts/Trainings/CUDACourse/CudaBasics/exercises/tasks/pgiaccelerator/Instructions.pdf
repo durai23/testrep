@@ -1,0 +1,343 @@
+%PDF-1.4
+%“Œ‹ž ReportLab Generated PDF document http://www.reportlab.com
+% 'BasicFonts': class PDFDictionary 
+1 0 obj
+% The standard fonts dictionary
+<< /F1 2 0 R
+ /F2 3 0 R
+ /F3 4 0 R
+ /F4 5 0 R
+ /F5 6 0 R >>
+endobj
+% 'F1': class PDFType1Font 
+2 0 obj
+% Font Helvetica
+<< /BaseFont /Helvetica
+ /Encoding /WinAnsiEncoding
+ /Name /F1
+ /Subtype /Type1
+ /Type /Font >>
+endobj
+% 'F2': class PDFType1Font 
+3 0 obj
+% Font Helvetica-Bold
+<< /BaseFont /Helvetica-Bold
+ /Encoding /WinAnsiEncoding
+ /Name /F2
+ /Subtype /Type1
+ /Type /Font >>
+endobj
+% 'F3': class PDFType1Font 
+4 0 obj
+% Font Courier-Bold
+<< /BaseFont /Courier-Bold
+ /Encoding /WinAnsiEncoding
+ /Name /F3
+ /Subtype /Type1
+ /Type /Font >>
+endobj
+% 'F4': class PDFType1Font 
+5 0 obj
+% Font Courier
+<< /BaseFont /Courier
+ /Encoding /WinAnsiEncoding
+ /Name /F4
+ /Subtype /Type1
+ /Type /Font >>
+endobj
+% 'F5': class PDFType1Font 
+6 0 obj
+% Font Helvetica-Oblique
+<< /BaseFont /Helvetica-Oblique
+ /Encoding /WinAnsiEncoding
+ /Name /F5
+ /Subtype /Type1
+ /Type /Font >>
+endobj
+% 'Page1': class PDFPage 
+7 0 obj
+% Page dictionary
+<< /Contents 14 0 R
+ /MediaBox [ 0
+ 0
+ 595.2756
+ 841.8898 ]
+ /Parent 13 0 R
+ /Resources << /Font 1 0 R
+ /ProcSet [ /PDF
+ /Text
+ /ImageB
+ /ImageC
+ /ImageI ] >>
+ /Rotate 0
+ /Trans <<  >>
+ /Type /Page >>
+endobj
+% 'R8': class PDFCatalog 
+8 0 obj
+% Document Root
+<< /Outlines 10 0 R
+ /PageLabels 15 0 R
+ /PageMode /UseNone
+ /Pages 13 0 R
+ /Type /Catalog >>
+endobj
+% 'R9': class PDFInfo 
+9 0 obj
+<< /Author ()
+ /CreationDate (D:20110830171319-01'00')
+ /Creator (\(unspecified\))
+ /Keywords ()
+ /Producer (ReportLab PDF Library - www.reportlab.com)
+ /Subject (\(unspecified\))
+ /Title (PGI Accelerator) >>
+endobj
+% 'R10': class PDFOutlines 
+10 0 obj
+<< /Count 2
+ /First 11 0 R
+ /Last 12 0 R
+ /Type /Outlines >>
+endobj
+% 'Outline.0': class OutlineEntryObject 
+11 0 obj
+<< /Dest [ 7 0 R
+ /XYZ
+ 62.69291
+ 611.8236
+ 0 ]
+ /Next 12 0 R
+ /Parent 10 0 R
+ /Title (Todo) >>
+endobj
+% 'Outline.1': class OutlineEntryObject 
+12 0 obj
+<< /Dest [ 7 0 R
+ /XYZ
+ 62.69291
+ 470.8236
+ 0 ]
+ /Parent 10 0 R
+ /Prev 11 0 R
+ /Title (Extra credit) >>
+endobj
+% 'R13': class PDFPages 
+13 0 obj
+% page tree
+<< /Count 1
+ /Kids [ 7 0 R ]
+ /Type /Pages >>
+endobj
+% 'R14': class PDFStream 
+14 0 obj
+% page stream
+<< /Length 3419 >>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 62.69291 741.0236 cm
+q
+BT 1 0 0 1 0 9.64 Tm 159.9149 0 Td 24 TL /F2 20 Tf 0 0 0 rg (PGI Accelerator) Tj T* -159.9149 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 719.0236 cm
+q
+BT 1 0 0 1 0 4.82 Tm 12 TL /F1 10 Tf 0 0 0 rg (This is a simple implementation of a matrix-matrix multiplication in Fortran.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 701.0236 cm
+q
+BT 1 0 0 1 0 4.82 Tm 12 TL /F1 10 Tf 0 0 0 rg (A for loop in Fortran is called a do loop and it has the form) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 643.8236 cm
+q
+q
+1 0 0 1 0 0 cm
+q
+1 0 0 1 6.6 6.6 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 468.6898 48 re B*
+Q
+q
+BT 1 0 0 1 0 26 Tm 12 TL /F3 10 Tf 0 .501961 0 rg (do ) Tj /F4 10 Tf .098039 .090196 .486275 rg (i) Tj .4 .4 .4 rg (=) Tj (1) Tj 0 0 0 rg (,) Tj ( ) Tj .4 .4 .4 rg (5) Tj 0 0 0 rg  T* (...) Tj  T* /F3 10 Tf 0 .501961 0 rg (end do) Tj T* ET
+Q
+Q
+Q
+Q
+Q
+q
+1 0 0 1 62.69291 623.8236 cm
+q
+BT 1 0 0 1 0 4.82 Tm 12 TL /F1 10 Tf 0 0 0 rg (The variable i takes the values 1, 2, 3, 4, 5. The first element of an array ) Tj /F5 10 Tf (A) Tj /F1 10 Tf ( is usually ) Tj /F5 10 Tf (A\(1\)) Tj /F1 10 Tf (.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 590.8236 cm
+q
+BT 1 0 0 1 0 8.435 Tm 21 TL /F2 17.5 Tf 0 0 0 rg (Todo) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 578.8236 cm
+Q
+q
+1 0 0 1 62.69291 578.8236 cm
+Q
+q
+1 0 0 1 62.69291 566.8236 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 -3 cm
+q
+BT 1 0 0 1 0 4.82 Tm 5.66 0 Td 12 TL /F1 10 Tf 0 0 0 rg (1.) Tj T* -5.66 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+BT 1 0 0 1 0 4.82 Tm 12 TL /F1 10 Tf 0 0 0 rg (Run ) Tj /F4 10 Tf (make cpu) Tj /F1 10 Tf ( to compile the CPU version of the code) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 560.8236 cm
+Q
+q
+1 0 0 1 62.69291 548.8236 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 -3 cm
+q
+BT 1 0 0 1 0 4.82 Tm 5.66 0 Td 12 TL /F1 10 Tf 0 0 0 rg (2.) Tj T* -5.66 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+BT 1 0 0 1 0 4.82 Tm 12 TL /F1 10 Tf 0 0 0 rg (Open the file mm.f90 and insert the PGI Accelerator directives.) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 542.8236 cm
+Q
+q
+1 0 0 1 62.69291 530.8236 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 -3 cm
+q
+BT 1 0 0 1 0 4.82 Tm 5.66 0 Td 12 TL /F1 10 Tf 0 0 0 rg (3.) Tj T* -5.66 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+BT 1 0 0 1 0 4.82 Tm 12 TL /F1 10 Tf 0 0 0 rg (Run ) Tj /F4 10 Tf (make acc) Tj /F1 10 Tf ( to compile your changed code.) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 524.8236 cm
+Q
+q
+1 0 0 1 62.69291 500.8236 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 9 cm
+q
+BT 1 0 0 1 0 4.82 Tm 5.66 0 Td 12 TL /F1 10 Tf 0 0 0 rg (4.) Tj T* -5.66 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+BT 1 0 0 1 0 16.82 Tm 2.084985 Tw 12 TL /F1 10 Tf 0 0 0 rg (Run the programs. How fast are the codes? How many GFLOP/s do you get? Are those good) Tj T* 0 Tw (values?) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 500.8236 cm
+Q
+q
+1 0 0 1 62.69291 482.8236 cm
+q
+BT 1 0 0 1 0 4.82 Tm 12 TL /F1 10 Tf 0 0 0 rg (If you are having problems make sure that you are running the programs on a node with GPUs.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 449.8236 cm
+q
+BT 1 0 0 1 0 8.435 Tm 21 TL /F2 17.5 Tf 0 0 0 rg (Extra credit) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 431.8236 cm
+q
+BT 1 0 0 1 0 4.82 Tm 12 TL /F1 10 Tf 0 0 0 rg (Rewrite the program in C.) Tj T* ET
+Q
+Q
+ 
+endstream
+endobj
+% 'R15': class PDFPageLabels 
+15 0 obj
+% Document Root
+<< /Nums [ 0
+ 16 0 R ] >>
+endobj
+% 'R16': class PDFPageLabel 
+16 0 obj
+% None
+<< /S /D
+ /St 1 >>
+endobj
+xref
+0 17
+0000000000 65535 f
+0000000113 00000 n
+0000000257 00000 n
+0000000422 00000 n
+0000000597 00000 n
+0000000768 00000 n
+0000000929 00000 n
+0000001108 00000 n
+0000001387 00000 n
+0000001544 00000 n
+0000001806 00000 n
+0000001931 00000 n
+0000002095 00000 n
+0000002251 00000 n
+0000002358 00000 n
+0000005880 00000 n
+0000005973 00000 n
+trailer
+<< /ID 
+ % ReportLab generated PDF document -- digest (http://www.reportlab.com) 
+ [(B\316Er'\346\014\251V\217\370\251\014\223\022\234) (B\316Er'\346\014\251V\217\370\251\014\223\022\234)] 
+
+ /Info 9 0 R
+ /Root 8 0 R
+ /Size 17 >>
+startxref
+6020
+%%EOF

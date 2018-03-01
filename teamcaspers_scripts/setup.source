@@ -1,0 +1,15 @@
+#!/bin/bash
+
+export BASE_DIR=$(readlink -m "$(dirname ${BASH_SOURCE})/..")
+export BIN_DIR="${BASE_DIR}/Scripts"
+export DATA_DIR="${BASE_DIR}/00_Data"
+export T1W_DIR="${BASE_DIR}/01_T1w"
+export EDDY_DIR="${BASE_DIR}/02_Eddy"
+export TENSOR_DIR="${BASE_DIR}/03_Tensor"
+
+export DATA_SETS="${BASE_DIR}/datasets.txt"
+# export DATA_SETS="${BASE_DIR}/dataset.txt"
+
+for i in BASE_DIR BIN_DIR DATA_DIR T1W_DIR EDDY_DIR TENSOR_DIR DATA_SETS; do
+    echo "\$${i} : ${!i}"
+done

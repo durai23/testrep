@@ -47,6 +47,7 @@ tract=cell2mat(tract.data);
 %%%size(streaml,2) refers to 2nd dimension of the size of streaml
 %%%take 2X15000 tract and put each row of tract in a different variable each of size 3X5000
 %%%what are these 2 rows and why are they being reshaped into 3X5000
+%%%
 seed = reshape(tract(1,:) , [3 size(streaml,2)])';
 tract = reshape(tract(2,:) , [3 size(streaml,2)])';
 
@@ -57,8 +58,12 @@ col = 'g'; % color of marker
 
 %% compute kmeans with k clusters
 % parameters remained at default euclidean distance - which makes sense in
+%%% what is this euclidean distance
 % this case
 % 100 replications
+%%% how do you decide k - READ UP
+%%% waht is REPLICATES
+%%% what is IDX matrix
 IDX = kmeans(tract, k, 'Replicates',100);
 
 %% plot brains with endpoints
@@ -71,6 +76,7 @@ P = parula(k);
 str=plot(brain_surface); hold on
 set(str , 'FaceColor' , [.85 .85 .85])
 set(str , 'Facealpha' , 0.3);
+%%% what is this streamline function - its built in MATLAB
 hold on; st = streamline(streaml);
 for i = 1:size(streaml,2)
     st(i).Color= P(IDX(i),:);

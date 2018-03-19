@@ -5,7 +5,9 @@ import numpy as np
 from scipy import stats
 import statsmodels.api as sm
 from sklearn.linear_model import LinearRegression
-from sklearn.ensemble import RandomForestClassifier
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score
 import subprocess
 #get hostname and set base directory
 j = subprocess.Popen("hostname", stdout=subprocess.PIPE, shell=True)
@@ -24,10 +26,31 @@ dfm=pd.read_csv(base+'/TOTAL_METRICS_Skel_header.csv',sep=' ')
 dfplot=dfm.merge(dfs,left_on='NAME', right_on='Identifiers',sort=True)
 df_plot=dfplot.drop('Identifiers',axis=1)
 df_plot_no_visit=df_plot.drop('Visit',axis=1)
+df_plot_no_visit_no_name=df_plot_no_visit.drop('NAME',axis=1)
 #sns.heatmap(df_plot_no_visit.corr(),xticklabels=df_plot_no_visit.corr().columns.values,yticklabels=df_plot_no_visit.corr().columns.values)
 
+def skl_ftr_imp():
+    y=df_plot_no_visit_no_name.Age
+    X=df_plot_no_visit_no_name.drop('Age',axis=1)
+    X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=42, test_size=.33)
+    clf = RandomForestRegressor(n_jobs=2, n_estimators=1000)
+    model = clf.fit(X_train, y_train)
+    print X_train.columns.tolist()
+    print type(X_train.columns)
+    print model.feature_importances_
+    print type(model.feature_importances_)
+    
+    pal = sns.color_palette("Blues_d", len(y))
+    rank = y.argsort().argsort()   # http://stackoverflow.com/a/6266510/1628638
+    #sns.barplot(x=data.index, y=data, palette=np.array(pal[::-1])[rank])
+    g=sns.barplot(x=X_train.columns.tolist(),y=model.feature_importances_, color='blue')
+    g.set_xticklabels(g.get_xticklabels(),rotation=90)
+    predicted=clf.predict(X_test)
+    accuracy=accuracy_score(y_test,predicted)
+    print  'Out-of-bag score estimate: '+clf.oob_score_
+    print 'Mean accuracy score: {'+accuracy
+
 def dia_corr_mat():
-    df_plot_no_visit_no_name=df_plot_no_visit.drop('NAME',axis=1)
     corr=df_plot_no_visit_no_name.corr()
     # Generate a mask for the upper triangle
     mask = np.zeros_like(corr, dtype=np.bool)
@@ -40,6 +63,7 @@ def dia_corr_mat():
     # Draw the heatmap with the mask and correct aspect ratio
     sns.heatmap(corr, mask=mask, cmap=cmap,annot=True, center=0,
             square=True, linewidths=.5, cbar_kws={"shrink": .5})
+    plt.show()
     
 #function to list subjects in PSMD results but not in 1000Brains list
 def missing_subs():

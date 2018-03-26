@@ -27,6 +27,7 @@ dfplot=dfm.merge(dfs,left_on='NAME', right_on='Identifiers',sort=True)
 df_plot=dfplot.drop('Identifiers',axis=1)
 df_plot_no_visit=df_plot.drop('Visit',axis=1)
 df_plot_no_visit_no_name=df_plot_no_visit.drop('NAME',axis=1)
+#df_plot_no_visit_no_name=dfplot.drop(['Identifiers', 'Visit','NAME'], axis=1).columns
 #sns.heatmap(df_plot_no_visit.corr(),xticklabels=df_plot_no_visit.corr().columns.values,yticklabels=df_plot_no_visit.corr().columns.values)
 
 def skl_ftr_imp():
@@ -45,8 +46,8 @@ def skl_ftr_imp():
     #sns.barplot(x=data.index, y=data, palette=np.array(pal[::-1])[rank])
     g=sns.barplot(x=X_train.columns.tolist(),y=model.feature_importances_, color='blue')
     g.set_xticklabels(g.get_xticklabels(),rotation=90)
-    predicted=clf.predict(X_test)
-    accuracy=accuracy_score(y_test,predicted)
+    #predicted=clf.predict(X_test)
+    #accuracy=accuracy_score(y_test,predicted)
     print  'Out-of-bag score estimate: '+clf.oob_score_
     print 'Mean accuracy score: {'+accuracy
 
@@ -100,6 +101,19 @@ def scp_linreg_metric(metric):
     x,y=get_age_metric(metric)
     slope, intercept, r_value, p_value, std_err = stats.linregress(x, y)
     return slope, r_value, r_value**2, p_value
+
+def scp_linreg_plot():
+    a=[]
+    y=np.array([])
+    for i in df_plot_no_visit_no_name.columns:
+#        print i
+        if 'LH' in i:
+            s,_,r2,_=scp_linreg_metric(i)
+            a.append(i)
+            y=np.append(y,r2)
+    g=sns.barplot(x=a,y=y, color='blue')
+    g.set_xticklabels(g.get_xticklabels(),rotation=90)
+    
 
 def sm_ols_metric(metric):
     x,y=get_age_metric(metric)

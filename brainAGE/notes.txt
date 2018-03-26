@@ -1,0 +1,15 @@
+2010 paper
+The most accurate measures in adults have reported a mean absolute error (MAE) of <5 years
+
+siological measurements of hand-grip strength, lung function, and walking speed are used to characterise general physical health as well as to predict risk of mortality in older adults
+
+Interestingly, brain age was a stronger predictor of mortality than the other measures, although a combined model of brain age with DNA-methylation age was the best predictor, illustrating the benefits of combining distinct ageing biomarkers.
+
+The idea behind cross-validation is that some proportion of the individuals in the training set is left out of the initial ‘learning’ stage. The parameters of the learned model (analogous to OLS beta estimates) are then applied to the pre-processed data of the left-out individuals resulting in brain-derived predictions of age. This age prediction is then
+compared with the known chronological age of each left-out individual.
+
+It is hoped that combining ageing-related biomarkers with more disease-specific biomarkers will lead to further improvements in diagnostic and prognostic modelling, moving closer to clinical applications of neuroimaging.
+
+2012 paper
+
+

@@ -12,4 +12,45 @@ It is hoped that combining ageing-related biomarkers with more disease-specific 
 
 2012 paper
 
+2010
+
+urthermore, local areas of accelerated GM decline and microstructural changes in WM were reported, suggesting a heterogeneous and complex pattern of atrophy across the adult life span (Good et al., 2001).
+vidence for a region-specific and non-linear pattern of neurodegenerative age-related changes in GM volume was also provided by cross-sectional morphometric analyses
+Most of these studies used a processing sequence that started with segmenting and spatially normalizing MRI data, then applied some kind of feature selection or dimensionality reduction (e.g., principal component analysis (PCA)), trained a classifier based on Support Vector Machines (SVM), and finally estimated the classification accuracy with (jackknife) cross-validation.
+Typically, the sample sizes of these classification studies were rather small, thus entailing the risk of overfitting
+ncrease sensitivity and reliability of the classification methods, Ashburner (2009) advocated the initiation and usage of multi-scanner data sets tracking a large number of subjects
+hese results support the hypothesis of AD being a form of accelerated aging, implying accelerated brain atrophy
+A straightforward and efficient solution is to model age regression basedon normal brain anatomy such that an individual's age can be accurately estimated from its brain scan alone.
+Ashburner (2007) estimated the age of subjects based on their brain images utilizing a relevance vector machine (RVM) for regression
+As a measure for prediction accuracy, a root mean squared error (RMSE) of 6.5 years was reported.
+Another method used quantitative brain water maps to predict age and gender of 44 healthy volunteers aged 23 to 74 years (Neeb et al., 2006). A linear discriminant analysis with jackknife cross-validation for age prediction resulted in a median absolute deviation between real and predicted age of ±6.3 years.
+efficiently estimating the age of healthy subjects from T 1 -weighted MRI scans using RVM-based regression
+To avoid overfitting as well as to increase sensitivity and reliability, we combine data from the IXI database (http://fantail.doc.ic.ac.uk) and a second sample (Gaser et al., 1999).
+In total, data from over 650 healthy subjects aged between 19 and 86, collected from four different scanners, were included
+Another goal of this study was a comparison of the performance of well-established SVM with RVM-based regression. SVM require the optimization of a number of parameters (described in more detail in the Methods section). We therefore expect RVM to be more stable and less vulnerable to parameter selection errors than SVM.
+Due to the “curse of dimensionality”, we expect the age esti-mation to be more accurate if the dimensionality of the preprocessed data is reduced by a dimension reduction method like PCA.
+Finally, the age estimation framework will be applied to a clinical sample from the Alzheimer's Disease Neuroimaging Initiative (ADNI) database
+The subjects were pseudo- randomly split into a training sample, which was used to generate the regression models in relevance vector regression (RVR) and support vector regression (SVR), and a test sample
+fter sorting the subjects by age, every fourth subject entered the test sample. Since three subjects, for whom no age was given, had to be excluded, the training sample “TRAIN1-3” consisted of 410 subjects, and the first test sample (“TEST1-3”) consisted of the remaining 137 subjects from the IXI database, acquired on the three different scanners mentioned above. The second test sample (“TEST4”) originally served as a control group in a clinical study (Gaser et al., 1999). TEST4 contained T 1 images from 108 healthy subjects aged 20–59 years, which were obtained on a fourth scanner (Philips 1.5T). 
+Preprocessing of the images was done using the SPM8 package; SPM 8, 2009) and the VBM8 toolbox
+All T 1 -weighted images were corrected for bias-field inhomogeneities, then spatially normalized and segmented into GM, WM, and CSF within the same generative model
+he segmentation procedure was further extended by accounting for partial volume effects (Tohka et al., 2004), by applying adaptive maximum a posteriori estimations (Rajapakse et al., 1997), and by applying hidden Markov random field model (Cuadra et al., 2005) as described by Gaser (2009).
+Only GM images were used for the TRAIN1-3 sample and to test the age estimation model.
+To make this age estimation framework fast and efficient, the images were additionally processed with affine registration (AF) and smoothed with an 8-mm full-width-at-half-maximum (FWHM) smoothing kernel (S8)
+In order to reduce data size the spatial resolution was set to 8 mm (R8), resulting an image size of about 3700 voxels per subject.
+urthermore – for comparison – the images were registered non-linearly (NL), a 4-mm FWHM smoothing kernel (S4) was used, and spatial resolution was set to 3 mm (R3) and 4 mm (R4). As non-linear spatial normalization, the approach implemented in the New Segment toolbox in SPM8 was used.
+Usually, there are high spatial correlations in voxel-based structural images, which probably lead to redundant voxels.More- over, not every single voxel is equally relevant for age prediction.
+Because of that and due to the “curse of dimensionality”, data reduction or feature selection might be necessary to obtain mean- ingful results from the pattern recognition analysis
+sing the “Matlab Toolbox for Dimensionality Reduction” (version 0.7b; van der Maaten, 2007, 2008), PCA was applied to the preprocessed images of the training sample.
+hen the two test samples were reduced using the resulting PCA transformation.
+Corresponding to the number of subjects in the training sample, the data finally had a size of 410 principal components per subject.
+The main idea behind SVMs is the transformation of training data from input space into high-dimensional space – the feature space – via a mapping function Φ
+For the purpose of classification, the hyperplane that best separates the groups is computed within this feature space, resulting in a non-linear decision boundary within the input space. The best separating hyperplane is found by maximizing the margin between the two groups. The data points lying on the margin boundaries are called support vectors since only these are used to specify the optimal separating hyperplane. In the case of overlapping class distributions, some training data points are allowed to be misclassified, resulting in some support vectors lying within the margin or on the wrong side of the margin boundary(soft-margin classification; Bishop, 2006).
+For the case of real-valued output functions (rather than just binary outputs as used in classification), the SV algorithm was generalized to regression estimation (Bennett and Campbell, 2003; Schölkopf and Smola, 2002). In SVR, a function has to be found that fits as many data points as possible. Analogous to the soft margin in classification, the regression line is surrounded by a tube. Data points
+lying within that tube do not influence the course of the regression line. Data points lying on the edge or outside that tube are called support vectors (Fig. 1a). The expansion of the tube can be determined
+in a variety of ways, with ɛ-SVR and ν-SVR being the most common approaches. In ɛ-SVR, the a priori specified constant ɛ defines the width of the linear ɛ-insensitive tube around the regression line. Data
+points falling within this ɛ-insensitive tube are not penalized, and are therefore not taken as support vectors. In ν-SVR, the a priori specified sparsity parameter ν defines the upper bound on the fraction of
+support vectors, i.e., data points lying outside an ɛ-insensitive tube that is automatically adjusted in width. To control the behavior of ɛ- SVR and ν-SVR, the type of kernel has to be chosen, along with two
+more parameters: C, which controls for model complexity, and ɛ or ν, respectively. A short overview of SVM can be found in Bennett and Campbell (2003). More details can be found in Bishop (2006) or Schölkopf and Smola (2002).
+
 

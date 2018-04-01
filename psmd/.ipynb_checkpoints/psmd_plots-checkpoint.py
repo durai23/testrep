@@ -13,7 +13,7 @@ import subprocess
 j = subprocess.Popen("hostname", stdout=subprocess.PIPE, shell=True)
 (output, err) = j.communicate()
 if 'imen' in output:
-    base="/home/arasan/Downloads/BRIDGET/plots"
+    base="/home/dnambil/Downloads/BRIDGET/plots"
 else:
     base="/data/Team_Caspers/Arasan/BRIDGET/1000Brains_b1000-dMRI030_99xxxx_dwi_eddy"
 

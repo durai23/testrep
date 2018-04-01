@@ -136,10 +136,12 @@ rule freesurfer:
         pial = '1000Brains_derivatives/{id}/{visit}/anat/freesurfer/{id}_{visit}/surf/lh.pial',
     params:
         subjectdir = '1000Brains_derivatives/{id}/{visit}/anat/freesurfer',
+#With the benchmark directive, Snakemake can be instructed to measure the wall clock time of a job
     benchmark:
         'Benchmarks/freesurfer-{id}_{visit}.txt'
     threads:
         1
+#apparently the job wscheduler will read these resource specs
     resources:
         gpus = 0,
         mem = 2500,

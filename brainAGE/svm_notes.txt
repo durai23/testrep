@@ -1,0 +1,6 @@
+benette and campbell 2003
+To understand the power and elegance of the SVM approach, one must grasp three key ideas: margins, duality, and kernels.
+C - balances calssification accuracy and simplicity of decision surface. low c leads to smooth decision surface and high C leads classifies all training examples correctly by giving hte model freedom to select mroe samples a as support vectors - C is the parameter for teh soft margin cost function. - it can also be considered a regularization parameter - aso called tuning paremter along with another parameter that depends th e type of kernel chosen
+
+
+

@@ -13,7 +13,7 @@ import subprocess
 j = subprocess.Popen("hostname", stdout=subprocess.PIPE, shell=True)
 (output, err) = j.communicate()
 if 'imen' in output:
-    base="/home/arasan/Downloads/BRIDGET/plots"
+    base="/home/arasan/testrep/psmd"
 else:
     base="/data/Team_Caspers/Arasan/BRIDGET/1000Brains_b1000-dMRI030_99xxxx_dwi_eddy"
 
@@ -23,12 +23,45 @@ dfs=pd.read_table(base+'/Visit1_Age.txt',sep='\t')
 #read in PSMD subjects list
 dfm=pd.read_csv(base+'/TOTAL_METRICS_Skel_header.csv',sep=' ')
 #merge keeps both key columns - figure out how to avoid this
+#get 1000BRAINS age dbase - remove rows with visit2
+dftb=pd.read_csv(base+'/Age_2018-04-05_08-58-19.csv',sep='\t')
+dftb_novisit2=dftb[dftb.Visit=='1. Visit']
+
+#merge 
+dfplot_tb=dfm.merge(dftb_novisit2,left_on='NAME', right_on='SubjectID',sort=True)
+#dfplot_tb_final=
+df_plot_tb=dfplot_tb.drop('SubjectID',axis=1)
+df_plot_tb_no_visit=df_plot_tb.drop('Visit',axis=1)
+df_plot_tb_no_visit_no_name=df_plot_tb_no_visit.drop('NAME',axis=1)
 dfplot=dfm.merge(dfs,left_on='NAME', right_on='Identifiers',sort=True)
 df_plot=dfplot.drop('Identifiers',axis=1)
 df_plot_no_visit=df_plot.drop('Visit',axis=1)
 df_plot_no_visit_no_name=df_plot_no_visit.drop('NAME',axis=1)
+df_plot_no_visit_no_outliers=df_plot_no_visit[df_plot_no_visit.NAME != 993754]
+df_plot_no_visit_no_outliers=df_plot_no_visit_no_outliers[df_plot_no_visit_no_outliers.NAME != 995964]
 #df_plot_no_visit_no_name=dfplot.drop(['Identifiers', 'Visit','NAME'], axis=1).columns
 #sns.heatmap(df_plot_no_visit.corr(),xticklabels=df_plot_no_visit.corr().columns.values,yticklabels=df_plot_no_visit.corr().columns.values)
+
+#plot all linreg metricds while listing outliers
+def psmd_outlier(sd):
+    for i in df_plot_no_visit.columns:
+        if 'LH' in i:
+            g=sns.jointplot(x='Age',y=i,data=df_plot,kind='reg')
+            fig = g.fig 
+            fig.suptitle('Linear Regression Parameters', fontsize=12)
+            plt.show()
+            print "Outliers"
+            print df_plot_no_visit[np.abs(df_plot_no_visit[i]-df_plot_no_visit[i].mean())>=(sd*df_plot_no_visit[i].std())] [['NAME',i]]
+
+def plot_all_metrics_final(sd):
+    for i in df_plot_no_visit.columns:
+        if 'LH' in i:
+            g=sns.jointplot(x='Age',y=i,data=df_plot_no_visit_no_outliers,kind='reg')
+            fig = g.fig 
+            fig.suptitle('Linear Regression Parameters', fontsize=12)
+            plt.show()
+            print "Outliers"
+            print df_plot_no_visit_no_outliers[np.abs(df_plot_no_visit_no_outliers[i]-df_plot_no_visit_no_outliers[i].mean())>=(sd*df_plot_no_visit_no_outliers[i].std())] [['NAME',i]]
 
 def skl_ftr_imp():
     y=df_plot_no_visit_no_name.Age
@@ -70,7 +103,12 @@ def dia_corr_mat():
 def missing_subs():
     for i in dfm.NAME:
         if dfs[dfs.Identifiers==i]['Identifiers'].values.shape[0]<1:
-            print "subject "+str(i)+" is not present in database"
+            print "subject "+str(i)+" is not present in Visit1_Age.txt"
+
+def missing_subs_2():
+    for i in dfm.NAME:
+        if dftb[dftb.SubjectID==i]['SubjectID'].values.shape[0]<1:
+            print "subject "+str(i)+" is not present in Age_2018-04-05_08-58-19.csv"
             
 def get_age_metric(metric):
     x=np.array([])
@@ -94,8 +132,12 @@ def plot_metric(metric):
     sns.jointplot(x='Age',y=metric,data=data,kind='reg')
 
 def plot_metric_2(metric):
-    print metric
+#    print metric
     sns.jointplot(x='Age',y=metric,data=df_plot_no_visit,kind='reg')
+    plt.show()
+    #print df_plot_no_visit[np.abs(df_plot_no_visit.Pw90S_skel_MD_LH_RH-df_plot_no_visit.Pw90S_skel_MD_LH_RH.mean())=>(4*df_plot_no_visit.Pw90S_skel_MD_LH_RH.std())]['NAME'].values
+    print "Outliers"
+    print df_plot_no_visit[np.abs(df_plot_no_visit.Pw90S_skel_MD_LH_RH-df_plot_no_visit.Pw90S_skel_MD_LH_RH.mean())>=(4*df_plot_no_visit.Pw90S_skel_MD_LH_RH.std())] [['NAME',metric]]#['NAME'].values
     
 def scp_linreg_metric(metric):
     x,y=get_age_metric(metric)

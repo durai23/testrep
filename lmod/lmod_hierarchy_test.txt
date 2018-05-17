@@ -1,0 +1,92 @@
+module list gives
+1) GCCcore/.5.4.0 (H)   2) binutils/.2.29 (H)   3) StdEnv (H)
+
+module avail gives
+-------------------------------------------------------------------------------------------- Core packages --------------------------------------------------------------------------------------------
+   Advisor/2018                           EasyBuild/3.5.1                    (D)    LLVM/4.0.1                     (D)    Vampir/9.3.0                    ispc/1.9.1
+   AllineaForge/7.1                       FreeSurfer/6.0.0                          MC/4.8.19                             VirtualGL/default               itac/2018.0.015
+   AllineaPerformanceReports/7.1          GC3Pie/2.4.2                              Mercurial/4.0.1-Python-2.7.14         X11/20170314                    jemalloc/5.0.1
+   Atom/1.21.1                            GDB/8.0.1                                 NCCL/2.1.4-CUDA-9.0.176               Xerces-C++/3.2.0                meld/3.16.4-Python-2.7.14
+   Autotools/20150215                     GIMP/2.9.4                                OpenEXR/2.2.0                         Xpra/1.0.8-Python-2.7.14        memkind/1.6.0
+   Bazel/0.7.0                            GMP/6.1.2                                 PAPI/5.5.1                            cURL/7.56.0                     numactl/2.0.11
+   Blender/2.79-binary                    GPicView/0.2.5                            Perl/5.26.1                           cppcheck/1.81                   p7zip/16.02
+   CFITSIO/3.420                          Grace/5.1.25                              Polygon2/2.0.8-Python-2.7.14          cuDNN/6.0-CUDA-8.0.61           tbb/2018.0.128
+   CMake/3.9.4                            Graphviz/2.40.1                           PostgreSQL/9.6.5                      cuDNN/7.0.3-CUDA-9.0.176 (D)    tbb/2018.1.163            (D)
+   CMake/3.10.2                  (D)      HDFView/2.14-Java-1.8.0_144               PyGTK/2.24.0-Python-2.7.14            flex/2.6.4                      tcsh/6.20.00
+   CUDA/8.0.61                   (g)      ICA-AROMA/0.4.3-beta-Python-2.7.14        PyOpenGL/3.1.1a1-Python-2.7.14        git/2.14.2                      tmux/2.6
+   CUDA/9.0.176                  (g,D)    IDL/8.5.1                                 PyQt/4.12.1-Python-2.7.14             gnuplot/5.2.0                   unzip/6.0
+   CVS/1.11.23                            ImageMagick/6.9.9-19                      Python/2.7.14                         imake/1.0.7                     wgrib/1.8.1.2c
+   Camino/20161122                        Inspector/2018                            Python/3.6.3                   (D)    intel-para/2017b-mt             xdiskusage/1.51
+   Cube/4.3.5                             JUBE/2.1.4                                Subversion/1.9.7                      intel-para/2017b         (D)    zsh/5.4.2
+   Doxygen/1.8.13                         JUBE/2.2.0                         (D)    TotalView/2017.2.11                   intel-para/2017b.1-mt
+   EasyBuild/3.4.0                        Java/1.8.0_144                            TotalView/2017.3.8             (D)    intel-para/2017b.1
+   EasyBuild/3.5.0                        LLVM/3.9.1                                VTune/2018                            ipp/2018.0.128
+
+---------------------------------------------------------------------------------------------- Compilers ----------------------------------------------------------------------------------------------
+   GCC/5.4.0    GCC/7.2.0 (D)    Intel/2017.5.239-GCC-5.4.0    Intel/2018.0.128-GCC-5.4.0 (D)    Intel/2018.1.163-GCC-5.4.0    PGI/17.9-GCC-5.4.0
+
+---------------------------------------------------------------------------------------- Recommended defaults -----------------------------------------------------------------------------------------
+   defaults/CPU
+
+-------------------------------------------------------------------------------------------- Architectures --------------------------------------------------------------------------------------------
+   Architecture/Haswell (S)    Architecture/KNL (S,D)
+
+echo $MODULEPATH
+/usr/local/software/jureca/Stages/2017b/modules/all/Compiler/GCCcore/5.4.0:/usr/local/software/jureca/Stages/2017b/UI/Compilers:/usr/local/software/jureca/Stages/2017b/UI/Tools:/usr/local/software/jureca/Stages/2017b/UI/Defaults:/usr/local/software/mod_environment
+echo $MODULEPATH_ROOT
+/usr/local/software/jureca/modules/all
+
+FROM WHICH OF THE ABOVE ROOT PATHS do the "avail" packages come from?
+Do all the listed packages in Core Packages, Compilers and Architectures fit with the modulepaths loaded?
+1) /usr/local/software/jureca/Stages/2017b/modules/all/
+found hidden lua modulefile .2.29 in /usr/local/software/jureca/Stages/2017b/modules/all/Core/binutils as indicated by H sign in module list
+
+found hidden lua modulefile .5.4.0 in /usr/local/software/jureca/Stages/2017b/modules/all/Core/GCCcore as indicated by H sign in module list
+prepends "/usr/local/software/jureca/Stages/2017b/modules/all/Compiler/GCCcore/5.4.0" to MODULEPATH
+this is the one loaded as indicated by echo MODULEPATH
+
+2) /usr/local/software/jureca/modules/all/
+found hidden lua modulefile .2.28 in /usr/local/software/jureca/modules/all/Core/binutils but not the one loaded
+
+found hidden lua modulefile .5.4.0 in /usr/local/software/jureca/modules/all/Core/GCCcore 
+prepends "/usr/local/software/jureca/Stages/2017a/modules/all/Compiler/GCCcore/5.4.0" to MODULEPATH
+this is not the one loaded
+
+AFTER UNLOADING GCCcore/5.4.0
+
+echo $MODULEPATH
+/usr/local/software/jureca/Stages/2017b/UI/Compilers:/usr/local/software/jureca/Stages/2017b/UI/Tools:/usr/local/software/jureca/Stages/2017b/UI/Defaults:/usr/local/software/mod_environment
+-bash-4.2$ module avail
+
+---------------------------------------------------------------------------------------------- Compilers ----------------------------------------------------------------------------------------------
+   GCC/5.4.0    GCC/7.2.0 (D)    Intel/2017.5.239-GCC-5.4.0    Intel/2018.0.128-GCC-5.4.0 (D)    Intel/2018.1.163-GCC-5.4.0    PGI/17.9-GCC-5.4.0
+
+-------------------------------------------------------------------------------------------- Core packages --------------------------------------------------------------------------------------------
+   Advisor/2018                           Camino/20161122        HDFView/2.14-Java-1.8.0_144        NCCL/2.1.4-CUDA-9.0.176        cuDNN/6.0-CUDA-8.0.61           intel-para/2017b.1    tbb/2018.1.163 (D)
+   AllineaForge/7.1                       EasyBuild/3.4.0        Inspector/2018                     TotalView/2017.2.11            cuDNN/7.0.3-CUDA-9.0.176 (D)    ipp/2018.0.128
+   AllineaPerformanceReports/7.1          EasyBuild/3.5.0        JUBE/2.1.4                         TotalView/2017.3.8      (D)    intel-para/2017b-mt             ispc/1.9.1
+   CUDA/8.0.61                   (g)      EasyBuild/3.5.1 (D)    JUBE/2.2.0                  (D)    VTune/2018                     intel-para/2017b         (D)    itac/2018.0.015
+   CUDA/9.0.176                  (g,D)    GC3Pie/2.4.2           Java/1.8.0_144                     Vampir/9.3.0                   intel-para/2017b.1-mt           tbb/2018.0.128
+
+---------------------------------------------------------------------------------------- Recommended defaults -----------------------------------------------------------------------------------------
+   defaults/CPU
+
+-------------------------------------------------------------------------------------------- Architectures --------------------------------------------------------------------------------------------
+   Architecture/Haswell (S)    Architecture/KNL (S,D)
+
+missign packages from "Core" have 100% match to packages with at least one lua file in respct directories under /usr/local/software/jureca/Stages/2017b/modules/all/Compiler/GCCcore/5.4.0
+present packages from "Core" match with /usr/local/software/jureca/Stages/2017b/UI/Tools (symlinks)
+present packages from "Compiler" match with /usr/local/software/jureca/Stages/2017b/UI/Compilers (symlinks)
+present packages from "Recommended Defaults" match with /usr/local/software/jureca/Stages/2017b/UI/Defaults (symlinks)
+present packages from "Architectures" match with /usr/local/software/mod_environment
+
+SUMMARY
+as you would expect modules available are all explained by the paths seen in the MODULEPATH variable
+
+
+************************************************************************************
+
+/usr/local/software/jureca/OtherStages/Stages/2016b.lua
+
+example of other lua commands like making modulesticky etc in above lua file
+

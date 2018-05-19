@@ -442,6 +442,7 @@ def polyfit2(x, y, degree):
 #        row_dict={'Age':}
 
 def psdnmyz():
+    #load TWO csv to be sent to be pseudonymz
     metrics_df=pd.read_csv('/home/arasan/testrep/psmd/jureca/TOTAL_METRICS_Skel_header.csv')
     seg_df=pd.read_csv('/home/arasan/testrep/psmd/jureca/psmd_seg_vols.csv')
     #add rnadom id column to both df
@@ -487,4 +488,29 @@ def psdnmyz():
 def psdnmyz_rnd_check():
     mapdf=pd.read_csv('/home/arasan/testrep/psmd/jureca/bordeaux_packet/psdnmyz_map.csv')
     print mapdf[mapdf.duplicated(keep=False)]
+
+def psdnmyz2():
+    #fs_df - load NEW csv to be sent to be pseudonymzed
+    #map_df - load map of random to original
+    #fs_df
+    cnt = 0
+    rndid=[]
+    map_df=pd.read_csv('/home/arasan/testrep/psmd/jureca/bordeaux_packet/psdnmyz_map.csv')
+    segdf=pd.read_csv('/home/arasan/testrep/psmd/jureca/IDs')
+    for i in segdf.ID:
+        if map_df[map_df.ID==i]['NAME'].values.size>0:
+            #print map_df[map_df.ID==i]['NAME'].values[0]
+            #rndid.append(map_df[map_df.ID==i]['NAME'].values[0])
+            cnt = cnt +1
+        else:
+            print 'missing '+str(i)
+            
+    print cnt
+        #rndid.append(map_df[map_df.ID==i]['NAME'].values[0])
+    #segdf=segdf.rename(index=str, columns={"NAME": "ID"})
+    #segdf['NAME']=rndid
+    #segdf.to_csv('/home/arasan/testrep/psmd/jureca/IDs_pseudonymized.csv')
+    
+    
+    
     

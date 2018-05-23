@@ -440,6 +440,90 @@ def polyfit2(x, y, degree):
 #    for i in dfm.NAME:
 #        if 
 #        row_dict={'Age':}
+def psdnmyz_2():
+    #load TWO csv to be sent to be pseudonymz
+    #metrics_df=pd.read_csv('/home/arasan/testrep/psmd/jureca/TOTAL_METRICS_Skel_header.csv')
+    seg_df=pd.read_csv('/home/arasan/testrep/psmd/jureca/psmd_seg_vols.csv')
+    #add rnadom id column to both df
+    #below line is a disaster
+    #metrics_df['RNDNAME'] = metrics_df['NAME'].apply(lambda x: gocept.pseudonymize.integer(x, 'secret'))
+    #seg_df['RNDNAME'] = seg_df['NAME'].apply(lambda x: gocept.pseudonymize.integer(x, 'secret'))
+#    a=np.random.randint(100000,999999,metrics_df.NAME.values.size)
+#    metrics_df['RNDNAME']=a
+#    print 'after rqndom id has been added'
+#    flagg=True
+#    while(flagg):
+#        try:
+#            print pd.concat(g for _, g in metrics_df.groupby("RNDNAME") if len(g) > 1)
+#        except ValueError:
+#            print 'NO DUPLICAtes'
+#            metrics_df.to_csv('/home/arasan/testrep/psmd/jureca/TOTAL_rnd_temp.csv')
+#            flagg=False
+#        else:
+#            print 'DUPES'
+#            metrics_df=metrics_df.drop('RNDNAME', axis=1)
+#            a=np.random.randint(100000,999999,metrics_df.NAME.values.size)
+#            metrics_df['RNDNAME']=a
+    #load double chekced randomeized df 1) above try catch 2) using np unique
+    metrnd=pd.read_csv('/home/arasan/testrep/psmd/jureca/TOTAL_rnd_temp.csv')
+    seg_df['SNO']=seg_df.index+1
+    metrnd['SNO']=seg_df.index+1
+    #add RNDAME column to seg_df
+    seg_df['RNDNAME']=metrnd.RNDNAME.values
+    #rename columns NANME to ID and RNDNAME to NAME
+    seg_df=seg_df.rename(index=str, columns={"NAME": "ID"})
+    seg_df=seg_df.rename(index=str, columns={"RNDNAME": "NAME"})
+    metrnd=metrnd.rename(index=str, columns={"NAME": "ID"})
+    metrnd=metrnd.rename(index=str, columns={"RNDNAME": "NAME"})
+    #dump map out with 3 columns ID,NAME,SNO
+    mapdf=metrnd[['ID','NAME','SNO']]
+    mapdf.to_csv('/home/arasan/testrep/psmd/jureca/bordeaux_packet2/psdnmyz_map.csv',index=False)
+    #drop ID and SNO
+    seg_df=seg_df.drop(['ID','SNO'],axis=1)
+    metrnd=metrnd.drop(['ID','SNO'],axis=1)
+    #move NAME column to first position
+    metrnd=metrnd[['NAME','mean_skel_MD_LH_RH','sd_skel_MD_LH_RH','Pw90S_skel_MD_LH_RH','mean_skel_FA_LH_RH','sd_skel_FA_LH_RH','mean_skel_AD_LH_RH','sd_skel_AD_LH_RH','mean_skel_RD_LH_RH','sd_skel_RD_LH_RH']]
+    seg_df=seg_df[['NAME','AGE','SEX','GMV','WMV','CSFV','ICV']]
+    #if pd.concat(g for _, g in metrics_df.groupby("RNDNAME") if len(g) > 1).RNDNAME.values.size:
+    #    print 'NOT OK'
+    #else:
+    #    print 'OK'
+    metrnd.to_csv('/home/arasan/testrep/psmd/jureca/bordeaux_packet2/TOTAL_METRICS_Skel_header.csv',index=False)
+    seg_df.to_csv('/home/arasan/testrep/psmd/jureca/bordeaux_packet2/psmd_seg_vols.csv',index=False)
+    
+def psdnmyz_2_check():
+    met=pd.read_csv('/home/arasan/testrep/psmd/jureca/bordeaux_packet2/TOTAL_METRICS_Skel_header.csv')
+    seg=pd.read_csv('/home/arasan/testrep/psmd/jureca/bordeaux_packet2/psmd_seg_vols.csv')
+    mapp=pd.read_csv('/home/arasan/testrep/psmd/jureca/bordeaux_packet2/psdnmyz_map.csv')
+    met_old=pd.read_csv('/home/arasan/testrep/psmd/jureca/TOTAL_METRICS_Skel_header.csv')
+    seg_old=pd.read_csv('/home/arasan/testrep/psmd/jureca/psmd_seg_vols.csv')
+    fs=pd.read_csv('/home/arasan/testrep/psmd/jureca/bordeaux_packet2/psmd_FS_vols.csv')
+    fs_old=pd.read_csv('/home/arasan/testrep/psmd/jureca/eTIV_1000BRAINS_FS53.txt',delimiter='\t')
+    
+    #check if metrics and seg dfs have corresp values for given sbuject hence checking if the map is acurat
+    cnt_match=0
+    for i in met.NAME:
+        #fetch ID from map df for subject
+        idd=mapp[mapp.NAME==i]['ID'].values[0]
+        #for every subject compare one metric from current csv and old csv
+        if (met[met.NAME==i]['mean_skel_MD_LH_RH'].values[0] == met_old[met_old.NAME==idd]['mean_skel_MD_LH_RH'].values[0] and seg[seg.NAME==i]['ICV'].values[0] == seg_old[seg_old.NAME==idd]['ICV'].values[0]):
+            
+            cnt_match = cnt_match + 1
+        else:
+            print i
+    print cnt_match    
+    cnt_match=0
+    for i in fs.NAME:
+        idd=mapp[mapp.NAME==i]['ID'].values[0]
+        if fs[fs.NAME==i]['EstimatedTotalIntracranialVolume'].values[0] == fs_old[fs_old.ID==idd]['EstimatedTotalIntracranialVolume'].values[0]:
+            cnt_match = cnt_match + 1
+        else:
+            print i
+    print cnt_match
+        
+        
+    #check if map and metrics haave corresp
+    #check if metrics and old metrics have corresp
 
 def psdnmyz():
     #load TWO csv to be sent to be pseudonymz
@@ -447,9 +531,10 @@ def psdnmyz():
     seg_df=pd.read_csv('/home/arasan/testrep/psmd/jureca/psmd_seg_vols.csv')
     #add rnadom id column to both df
     metrics_df['RNDNAME'] = metrics_df['NAME'].apply(lambda x: gocept.pseudonymize.integer(x, 'secret'))
-    seg_df['RNDNAME'] = seg_df['NAME'].apply(lambda x: gocept.pseudonymize.integer(x, 'secret'))
+    #seg_df['RNDNAME'] = seg_df['NAME'].apply(lambda x: gocept.pseudonymize.integer(x, 'secret'))
     print 'after rqndom id has been added'
-    print metrics_df.head(n=5)
+    print pd.concat(g for _, g in metrics_df.groupby("NAME") if len(g) > 1)
+    
     #add serial nmber column
     seg_df['SNO']=seg_df.index+1
     metrics_df['SNO']=seg_df.index+1
@@ -466,7 +551,7 @@ def psdnmyz():
     mapdf=metrics_df[['ID','NAME','SNO']]
     print 'this is the map'
     print mapdf.head(n=5)
-    mapdf.to_csv('/home/arasan/testrep/psmd/jureca/bordeaux_packet/psdnmyz_map.csv')
+    ###mapdf.to_csv('/home/arasan/testrep/psmd/jureca/bordeaux_packet/psdnmyz_map.csv')
     #drop ID and SNO
     seg_df=seg_df.drop(['ID','SNO'],axis=1)
     metrics_df=metrics_df.drop(['ID','SNO'],axis=1)
@@ -479,8 +564,8 @@ def psdnmyz():
     seg_df=seg_df[['NAME','AGE','SEX','GMV','WMV','CSFV','ICV']]
     print 'shiftnig NAME to nmber 1'
     print metrics_df.head(n=5)
-    metrics_df.to_csv('/home/arasan/testrep/psmd/jureca/bordeaux_packet/TOTAL_METRICS_Skel_header.csv',index=False)
-    seg_df.to_csv('/home/arasan/testrep/psmd/jureca/bordeaux_packet/psmd_seg_vols.csv',index=False)
+    ###metrics_df.to_csv('/home/arasan/testrep/psmd/jureca/bordeaux_packet/TOTAL_METRICS_Skel_header.csv',index=False)
+    ###seg_df.to_csv('/home/arasan/testrep/psmd/jureca/bordeaux_packet/psmd_seg_vols.csv',index=False)
     #dump out final 2 csvs
     #print indf.columns
     #print indf[fld,fld+'2']
@@ -488,6 +573,16 @@ def psdnmyz():
 def psdnmyz_rnd_check():
     mapdf=pd.read_csv('/home/arasan/testrep/psmd/jureca/bordeaux_packet/psdnmyz_map.csv')
     print mapdf[mapdf.duplicated(keep=False)]
+    print pd.concat(g for _, g in mapdf.groupby("NAME") if len(g) > 1)
+
+def psdnmyz_check(df):
+    mapdf=pd.read_csv('/home/arasan/testrep/psmd/jureca/bordeaux_packet/psdnmyz_map.csv')
+    cnt=0
+    for i in df.NAME:
+        if df[df.NAME==i]['ID'].values[0]==mapdf[mapdf.NAME==i]['ID'].values[0]:
+            cnt=cnt+1
+        else:
+            print df[df.NAME==i]['ID'].values[0]
 
 def psdnmyz2():
     #fs_df - load NEW csv to be sent to be pseudonymzed
@@ -511,6 +606,79 @@ def psdnmyz2():
     #segdf['NAME']=rndid
     #segdf.to_csv('/home/arasan/testrep/psmd/jureca/IDs_pseudonymized.csv')
     
+#pseudonymisze FS data sent by Bittner on 5/18
+def psdnmyz3():
+    fs2=pd.read_csv('/home/arasan/testrep/psmd/jureca/eTIV_1000BRAINS_FS53.txt',delimiter='\t')
+    #REMOVE OUTLIERS
+    fs2_no_outliers=fs2
+    print 'nsubj before outlier removal'
+    print fs2_no_outliers.ID.values.size 
+    for i in outliers:
+        fs2_no_outliers=fs2_no_outliers[fs2_no_outliers.ID!=i]
+    print 'nsubj afteer outlier removal'
+    print fs2_no_outliers.ID.values.size
+    #REMOVE SUBJ WITHOUT FSL ICV
+    seg=pd.read_csv('/home/arasan/testrep/psmd/jureca/psmd_seg_vols.csv')
+    rmvlist=[]
+    for i in fs2_no_outliers.ID:
+        if seg[seg.NAME==i]['NAME'].values.shape[0]<1:
+            print "subject "+str(i)+" in fs2_no_out is not present in seg"
+            rmvlist.append(i)
+    # remove rows from fs2_no_outliers that are no prewent in seg - because they have no fsl ICV
+    fs2_no_outliers_no_fslmissing=fs2_no_outliers
+    for i in rmvlist:
+        fs2_no_outliers_no_fslmissing=fs2_no_outliers_no_fslmissing[fs2_no_outliers_no_fslmissing.ID!=i]
+    print 'nsubj afteer fslmissing removal - final to be sent to BRODEAUX for FS ICV'
+    print fs2_no_outliers_no_fslmissing.ID.values.size   
     
+    #for i in seg.NAME:
+    #    if fs2_no_outliers[fs2_no_outliers.ID==i]['ID'].values.shape[0]<1:
+    #        print "subject "+str(i)+" present in seg is not present in fs2_no_out"
+    #print fs2_no_outliers
+    #LOAD MAP
+    map_df=pd.read_csv('/home/arasan/testrep/psmd/jureca/bordeaux_packet2/psdnmyz_map.csv')
+    cnt=0
+    rndid=[]
+    for i in fs2_no_outliers_no_fslmissing.ID:
+        if map_df[map_df.ID==i]['NAME'].values.size>0:
+            #print map_df[map_df.ID==i]['NAME'].values[0]
+            rndid.append(map_df[map_df.ID==i]['NAME'].values[0])
+            cnt = cnt +1
+        else:
+            print 'missing subj in MAP'+str(i)
+    #print rndid
+    #print cnt
+    print 'length of list reterived from MAP - should match nsubj in fs2_no_outliers_no_fslmissing'
+    print len(rndid)
+    #CREATE NW COLUMN FROM RNDID - CALL IT NAME
+    fs2_no_outliers_no_fslmissing['NAME']=rndid
+    #fs2_no_outliers['NAME']=pd.Series(rndid).values
+    #print fs2_no_outliers_no_fslmissing
+    
+    cnt=0
+    #print fs2_no_outliers_no_fslmissing
+    for i in fs2_no_outliers_no_fslmissing.NAME:
+        if fs2_no_outliers_no_fslmissing[fs2_no_outliers_no_fslmissing.NAME==i]['ID'].values[0]==map_df[map_df.NAME==i]['ID'].values[0]:
+            cnt=cnt+1
+        else:
+            print 'WRONG MAP'
+            print i
+            print fs2_no_outliers_no_fslmissing[fs2_no_outliers_no_fslmissing.NAME==i]['ID'].values[0]
+            print map_df[map_df.NAME==i]['ID'].values[0]
+    print 'number of correct matches should match nsubj after fslmissing removal'
+    print cnt    
+    
+    #drop ID
+    fs2_no_outliers_no_fslmissing=fs2_no_outliers_no_fslmissing.drop(['ID'],axis=1)
+    
+    #move NAME to first position
+    fs2_no_outliers_no_fslmissing=fs2_no_outliers_no_fslmissing[['NAME','EstimatedTotalIntracranialVolume']]
+    print fs2_no_outliers_no_fslmissing
+
+    fs2_no_outliers_no_fslmissing.to_csv('/home/arasan/testrep/psmd/jureca/bordeaux_packet2/psmd_FS_vols.csv',index=False)
+    
+    
+    #fs2_no_outliers.drop('ID', axis=1)
+    #segdf.to_csv('/home/arasan/testrep/psmd/jureca/IDs_pseudonymized.csv')
     
     

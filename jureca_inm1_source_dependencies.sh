@@ -9,8 +9,13 @@ echo $EXE
 eval "$EXE"
 #thsi simply adds Other stages to module avail. Goal is to load 2016b
 echo 
+#-bash-4.2$ echo $MODULEPATH
+#/usr/local/software/jureca/OtherStages:/usr/local/software/jureca/Stages/2018a/UI/Compilers:/usr/local/software/jureca/Stages/2018a/UI/Tools:/usr/local/software/jureca/Stages/2018a/UI/Defaults:/usr/local/#software/mod_environment
 
 EXE="module load Stages/2016b"
+#-bash-4.2$ echo $MODULEPATH
+#/usr/local/software/jureca/Stages/2016b/UI/Defaults:/usr/local/software/jureca/Stages/2016b/UI/Tools:/usr/local/software/jureca/Stages/2016b/UI/Compilers:/usr/local/software/jureca/OtherStages:/usr/local/#software/mod_environment
+
 #This is the main MODULEPAHT step where a stage is chosen and old stage ie 2018a is removed
 #this is done to load GCC 5.4.0 as eixsting GCC is 5.5.0
 #
@@ -28,6 +33,8 @@ add_property("lmod", "sticky")
 '
 EXE="module load GCC/5.4.0"
 #done mostly to makes these module availabel - Python/2.7.12 and FSL/5.0.9 and ParaStationMPI/5.1.5-1
+#CHANGES PATH
+#CHangeS PATH THROUG LOADING OTHRE MODULES
 echo $EXE
 eval "$EXE"
 ':
@@ -35,9 +42,39 @@ local root = "/usr/local/software/jureca/Stages/2016b/software/GCC/5.4.0"
 conflict("GCC")
 #note two modules loaded below are empty files - so only hcanges to MODULEPATH are the prepend_path commands below
 load("GCCcore/.5.4.0")
+	local root = "/usr/local/software/jureca/Stages/2016b/software/GCCcore/5.4.0"
+	conflict("GCCcore")
+	prepend_path("MODULEPATH", "/usr/local/software/jureca/Stages/2016b/modules/all/Compiler/GCCcore/5.4.0")
+	prepend_path("CPATH", pathJoin(root, "include"))
+	prepend_path("LD_LIBRARY_PATH", pathJoin(root, "lib"))
+	prepend_path("LD_LIBRARY_PATH", pathJoin(root, "lib64"))
+	prepend_path("LD_LIBRARY_PATH", pathJoin(root, "lib/gcc/x86_64-unknown-linux-gnu/5.4.0"))
+	prepend_path("LIBRARY_PATH", pathJoin(root, "lib"))
+	prepend_path("LIBRARY_PATH", pathJoin(root, "lib64"))
+	prepend_path("MANPATH", pathJoin(root, "share/man"))
+	prepend_path("PATH", pathJoin(root, "bin"))
+	setenv("EBROOTGCCCORE", root)
+	setenv("EBVERSIONGCCCORE", "5.4.0")
+	setenv("EBDEVELGCCCORE", pathJoin(root, "easybuild/Core-GCCcore-.5.4.0-easybuild-devel"))
+	set_alias("cc", "gcc")
 load("binutils/.2.27")
+	local root = "/usr/local/software/jureca/Stages/2016b/software/binutils/2.27"
+	conflict("binutils")
+	prepend_path("CPATH", pathJoin(root, "include"))
+	prepend_path("LD_LIBRARY_PATH", pathJoin(root, "lib"))
+	prepend_path("LIBRARY_PATH", pathJoin(root, "lib"))
+	prepend_path("MANPATH", pathJoin(root, "share/man"))
+	prepend_path("PATH", pathJoin(root, "bin"))
+	setenv("EBROOTBINUTILS", root)
+	setenv("EBVERSIONBINUTILS", "2.27")
+	setenv("EBDEVELBINUTILS", pathJoin(root, "easybuild/Core-binutils-.2.27-easybuild-devel"))
+	
 prepend_path("MODULEPATH", "/usr/local/software/jureca/Stages/2016b/modules/all/Compiler/GCC/5.4.0")
+	/usr/local/software/jureca/Stages/2016b/modules/all/Compiler/GCC/5.4.0/FSL/5.0.9.lua
+	/usr/local/software/jureca/Stages/2016b/modules/all/Compiler/GCC/5.4.0/Python/2.7.12.lua	
 prepend_path("MODULEPATH", "/usr/local/software/jureca/Stages/2016b/modules/all/Compiler/mpi/GCC/5.4.0")
+	/usr/local/software/jureca/Stages/2016b/modules/all/Compiler/mpi/GCC/5.4.0/ParaStationMPI/5.1.5-1.lua
+
 setenv("EBROOTGCC", "/usr/local/software/jureca/Stages/2016b/software/GCCcore/5.4.0")
 setenv("EBVERSIONGCC", "5.4.0")
 setenv("EBDEVELGCC", pathJoin(root, "easybuild/Core-GCC-5.4.0-easybuild-devel"))
@@ -45,6 +82,7 @@ family("compiler")
 '
 EXE="module load Python/2.7.12"
 #this does not change MODULEPATH
+#CHangeS PATH THROUG LOADING OTHRE MODULES
 echo $EXE
 eval "$EXE"
 ':

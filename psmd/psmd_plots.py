@@ -524,6 +524,94 @@ def psdnmyz_2_check():
         
     #check if map and metrics haave corresp
     #check if metrics and old metrics have corresp
+    
+def psdnmyz_3():
+    #load TWO csv to be sent to be pseudonymz
+    #metrics_df=pd.read_csv('/home/arasan/testrep/psmd/jureca/TOTAL_METRICS_Skel_header.csv')
+    seg_df=pd.read_csv('/home/arasan/testrep/psmd/jureca/psmd_seg2_vols.csv')
+    #add rnadom id column to both df
+    #below line is a disaster
+    #metrics_df['RNDNAME'] = metrics_df['NAME'].apply(lambda x: gocept.pseudonymize.integer(x, 'secret'))
+    #seg_df['RNDNAME'] = seg_df['NAME'].apply(lambda x: gocept.pseudonymize.integer(x, 'secret'))
+#    a=np.random.randint(100000,999999,metrics_df.NAME.values.size)
+#    metrics_df['RNDNAME']=a
+#    print 'after rqndom id has been added'
+#    flagg=True
+#    while(flagg):
+#        try:
+#            print pd.concat(g for _, g in metrics_df.groupby("RNDNAME") if len(g) > 1)
+#        except ValueError:
+#            print 'NO DUPLICAtes'
+#            metrics_df.to_csv('/home/arasan/testrep/psmd/jureca/TOTAL_rnd_temp.csv')
+#            flagg=False
+#        else:
+#            print 'DUPES'
+#            metrics_df=metrics_df.drop('RNDNAME', axis=1)
+#            a=np.random.randint(100000,999999,metrics_df.NAME.values.size)
+#            metrics_df['RNDNAME']=a
+    #load double chekced randomeized df 1) above try catch 2) using np unique
+    metrnd=pd.read_csv('/home/arasan/testrep/psmd/jureca/TOTAL_rnd_temp.csv')
+    seg_df['SNO']=seg_df.index+1
+    #metrnd['SNO']=seg_df.index+1
+    #add RNDAME column to seg_df
+    seg_df['RNDNAME']=metrnd.RNDNAME.values
+    #rename columns NANME to ID and RNDNAME to NAME
+    #seg_df=seg_df.rename(index=str, columns={"NAME": "ID"})
+    seg_df=seg_df.rename(index=str, columns={"RNDNAME": "NAME"})
+    #metrnd=metrnd.rename(index=str, columns={"NAME": "ID"})
+    #metrnd=metrnd.rename(index=str, columns={"RNDNAME": "NAME"})
+    #dump map out with 3 columns ID,NAME,SNO
+    #mapdf=metrnd[['ID','NAME','SNO']]
+    #mapdf.to_csv('/home/arasan/testrep/psmd/jureca/bordeaux_packet2/psdnmyz_map.csv',index=False)
+    #drop ID and SNO
+    seg_df=seg_df.drop(['ID','SNO'],axis=1)
+    #metrnd=metrnd.drop(['ID','SNO'],axis=1)
+    #move NAME column to first position
+    #metrnd=metrnd[['NAME','mean_skel_MD_LH_RH','sd_skel_MD_LH_RH','Pw90S_skel_MD_LH_RH','mean_skel_FA_LH_RH','sd_skel_FA_LH_RH','mean_skel_AD_LH_RH','sd_skel_AD_LH_RH','mean_skel_RD_LH_RH','sd_skel_RD_LH_RH']]
+    seg_df=seg_df[['NAME','AGE','SEX','ICV']]
+    #if pd.concat(g for _, g in metrics_df.groupby("RNDNAME") if len(g) > 1).RNDNAME.values.size:
+    #    print 'NOT OK'
+    #else:
+    #    print 'OK'
+    #metrnd.to_csv('/home/arasan/testrep/psmd/jureca/bordeaux_packet2/TOTAL_METRICS_Skel_header.csv',index=False)
+    seg_df.to_csv('/home/arasan/testrep/psmd/jureca/bordeaux_packet3/psmd_seg2_vols.csv',index=False)
+
+def psdnmyz_3_check():
+    met=pd.read_csv('/home/arasan/testrep/psmd/jureca/bordeaux_packet3/TOTAL_METRICS_Skel_header.csv')
+    seg=pd.read_csv('/home/arasan/testrep/psmd/jureca/bordeaux_packet3/psmd_seg2_vols.csv')
+    mapp=pd.read_csv('/home/arasan/testrep/psmd/jureca/bordeaux_packet3/psdnmyz_map.csv')
+    met_old=pd.read_csv('/home/arasan/testrep/psmd/jureca/TOTAL_METRICS_Skel_header.csv')
+    seg_old=pd.read_csv('/home/arasan/testrep/psmd/jureca/psmd_seg_vols.csv')
+#    fs=pd.read_csv('/home/arasan/testrep/psmd/jureca/bordeaux_packet3/psmd_FS_vols.csv')
+#    fs_old=pd.read_csv('/home/arasan/testrep/psmd/jureca/eTIV_1000BRAINS_FS53.txt',delimiter='\t')
+    
+    #check if metrics and seg dfs have corresp values for given sbuject hence checking if the map is acurat
+    cnt_match=0
+    for i in met.NAME:
+        #fetch ID from map df for subject
+        idd=mapp[mapp.NAME==i]['ID'].values[0]
+        #for every subject compare one metric from current csv and old csv
+        if (met[met.NAME==i]['mean_skel_MD_LH_RH'].values[0] == met_old[met_old.NAME==idd]['mean_skel_MD_LH_RH'].values[0] and seg[seg.NAME==i]['AGE'].values[0] == seg_old[seg_old.NAME==idd]['AGE'].values[0]):
+            
+            cnt_match = cnt_match + 1
+        else:
+            print i
+    print cnt_match    
+    cnt_match=0
+#    for i in fs.NAME:
+#        idd=mapp[mapp.NAME==i]['ID'].values[0]
+#        if fs[fs.NAME==i]['EstimatedTotalIntracranialVolume'].values[0] == fs_old[fs_old.ID==idd]['EstimatedTotalIntracranialVolume'].values[0]:
+#            cnt_match = cnt_match + 1
+#        else:
+#            print i
+#    print cnt_match
+    x=seg.ICV.values
+    y=seg_old.ICV.values
+    g=sns.jointplot(x=x,y=y,kind='reg')
+    g.set_axis_labels('New ICV', 'Old overestimated ICV', fontsize=16)
+    fig = g.fig
+    fig.suptitle('Old ICV vs new ICV', fontsize=12)
+    plt.show()
 
 def psdnmyz():
     #load TWO csv to be sent to be pseudonymz

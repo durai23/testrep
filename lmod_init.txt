@@ -1,0 +1,75 @@
+Hi Jan,
+
+In order to make lmod work we need to configure some files (It doesn't work at the moment - you can check by running "module avail" or "module list" commands - It will say "module: command not found")
+
+Kindly apply the following operations to make it work -
+
+For the bash shell -
+
+cp /usr/share/lmod/6.6/init/bash /etc/profile.d/
+
+For the tcsh shell -
+
+cp /usr/share/lmod/6.6/init/tcsh /etc/csh/login.d/
+
+cp /usr/share/lmod/6.6/init/cshrc /etc/csh/login.d/
+
+Then you can check by running "module avail" or "module list" commands to see if it works.
+
+Also you mentioned that Luisa Schafer could not login after lmod installation. Could you kindly let me know if users are experiencing login issues on imecas08 after configuring lmod as above. If no issues are found we can then repeat these steps on otehr imecas.
+
+Best,
+
+Durai 
+
+Hi Jan,
+
+Thanks for letting me know. I've killed the command. I was just making sure all occurences of "/usr/share/modules/init/*sh"are found and removed.
+
+Durai
+
+
+On 03/29/2018 10:41 AM, Jan Leonhardt wrote:
+> Hi Durai,
+>
+> thank you very much for your research, I will apply the solution.
+>
+> By the way, what are you trying to do on imecas08:
+>
+> 14954 be/4 darasan   339.35 M/s    0.00 B/s  0.00 % 42.54 % grep -rnw ./ -e /usr/share/modules/init
+>
+> I've seen it before several times, you are reading large amount of data from the fileserver.
+>
+> Cheers,
+> Jan
+
+
+Hi Jan,
+
+Removing this file should get rid of the error message -
+
+/etc/csh/login.d/modules
+
+It is the system wide initializing script of environment-modules for tcsh.
+
+Let me know if you still get any errors or login problems.
+
+Durai
+
+On 03/28/2018 11:50 AM, Jan Leonhardt wrote:
+> Hi Durai,
+>
+> this is what I had done, uninstalled environment-modules, installed lmod.
+> I have repeated ist on imecas08 now:
+>
+>> root@imecas08:~# su - jleo
+>> /usr/share/modules/init/tcsh: No such file or directory.
+>> imecas08:~%
+> Then last time Luisa Schäfer was not able to log in any more, so
+> for now ist is just on imecas08.
+>
+> Cheers,
+> Jan
+
+
+

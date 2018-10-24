@@ -1,0 +1,54 @@
+* pscom
+:* Description		: FSL is a comprehensive library of analysis tools for FMRI, MRI and DTI brain imaging data. - Homepage: http://www.fmrib.ox.ac.uk/fsl/
+:* Install method	: Using installer script
+:* Install source	: https://fsl.fmrib.ox.ac.uk
+:* Version		: 4.6.0
+
+* popt
+:* Description		: FSL is a comprehensive library of analysis tools for FMRI, MRI and DTI brain imaging data. - Homepage: http://www.fmrib.ox.ac.uk/fsl/
+:* Install method	: Using installer script
+:* Install source	: https://fsl.fmrib.ox.ac.uk
+:* Version		: 4.6.0
+
+* Eigen
+:* Description		: Eigen is a C++ template library for linear algebra: matrices, vectors, numerical solvers, and related algorithms.
+:* Install method	: Copying libraries from JURECA
+:* Install source	: https://stnava.github.io/ANTs/
+:* Version		: 3.3.4
+:* GCC version          : 5.5.0
+
+* PCRE
+:* Description		: FSL is a comprehensive library of analysis tools for FMRI, MRI and DTI brain imaging data. - Homepage: http://www.fmrib.ox.ac.uk/fsl/
+:* Install method	: Using installer script
+:* Install source	: https://fsl.fmrib.ox.ac.uk
+:* Version		: 4.6.0
+
+* libpng
+:* Description		: FSL is a comprehensive library of analysis tools for FMRI, MRI and DTI brain imaging data. - Homepage: http://www.fmrib.ox.ac.uk/fsl/
+:* Install method	: Using installer script
+:* Install source	: https://fsl.fmrib.ox.ac.uk
+:* Version		: 4.6.0
+
+* zlib
+:* Description		: FSL is a comprehensive library of analysis tools for FMRI, MRI and DTI brain imaging data. - Homepage: http://www.fmrib.ox.ac.uk/fsl/
+:* Install method	: Using installer script
+:* Install source	: https://fsl.fmrib.ox.ac.uk
+:* Version		: 4.6.0
+
+* ParaStationMPI
+:* Description		: FSL is a comprehensive library of analysis tools for FMRI, MRI and DTI brain imaging data. - Homepage: http://www.fmrib.ox.ac.uk/fsl/
+:* Install method	: Using installer script
+:* Install source	: https://fsl.fmrib.ox.ac.uk
+:* Version		: 4.6.0
+
+* freetype
+:* Description		: FSL is a comprehensive library of analysis tools for FMRI, MRI and DTI brain imaging data. - Homepage: http://www.fmrib.ox.ac.uk/fsl/
+:* Install method	: Using installer script
+:* Install source	: https://fsl.fmrib.ox.ac.uk
+:* Version		: 4.6.0
+
+* X11 2017.03.14
+:* Description		: FSL is a comprehensive library of analysis tools for FMRI, MRI and DTI brain imaging data. - Homepage: http://www.fmrib.ox.ac.uk/fsl/
+:* Install method	: Using installer script
+:* Install source	: https://fsl.fmrib.ox.ac.uk
+:* Version		: 2017.03.14

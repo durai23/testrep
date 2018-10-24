@@ -1,0 +1,103 @@
+* MRtrix 0.3.15 (not complete)
+:* Description		: MRtrix3 provides a set of tools to perform various types of diffusion MRI analyses, from various forms of tractography through to next-generation group-level analyses.
+:* Install method       : Compiled from source
+:* Install source       : https://github.com/MRtrix3/mrtrix3
+:* Version		: 3.0_RC3
+
+* MRtrix 3.0_RC3
+:* Description		: MRtrix3 provides a set of tools to perform various types of diffusion MRI analyses, from various forms of tractography through to next-generation group-level analyses.
+:* Install method       : Compiled from source
+:* Install source       : https://github.com/MRtrix3/mrtrix3
+:* Version		: 3.0_RC3
+
+* MRtrix 3.0_amp2response_speedup (explain speedup part)
+:* Description		: MRtrix3 provides a set of tools to perform various types of diffusion MRI analyses, from various forms of tractography through to next-generation group-level analyses.
+:* Install method       : Compiled from source
+:* Install source       : https://github.com/MRtrix3/mrtrix3
+:* Version		: 3.0_amp2response_speedup
+
+* ANTs 2.1.0
+:* Description		: ANTs computes high-dimensional mappings to capture the statistics of brain structure and function.
+:* Install method	: Compiled from source
+:* Install source	: https://stnava.github.io/ANTs/
+:* Version		: 2.1.0
+:* Also included ANTs_extra : Additional scripts accompanying this version of ANTs
+
+* FSL 5.0.9
+:* Description		: FSL is a comprehensive library of analysis tools for FMRI, MRI and DTI brain imaging data. - Homepage: http://www.fmrib.ox.ac.uk/fsl/
+:* Install method	: Installed by IT on imecas
+:* Install source	: Check with IT
+:* Version		: 5.0.9
+
+* FSL 5.0.11
+:* Description		: FSL is a comprehensive library of analysis tools for FMRI, MRI and DTI brain imaging data. - Homepage: http://www.fmrib.ox.ac.uk/fsl/
+:* Install method	: Using installer script
+:* Install source	: https://fsl.fmrib.ox.ac.uk
+:* Version		: 5.0.11
+
+* Snakemake 3.13.0 (not cpomplete)
+:* Description		: FSL is a comprehensive library of analysis tools for FMRI, MRI and DTI brain imaging data. - Homepage: http://www.fmrib.ox.ac.uk/fsl/
+:* Install method	: Using installer script
+:* Install source	: https://fsl.fmrib.ox.ac.uk
+:* Version		: 5.0.11
+
+* Python 2.7.13 (not complete)
+:* Description		: FSL is a comprehensive library of analysis tools for FMRI, MRI and DTI brain imaging data. - Homepage: http://www.fmrib.ox.ac.uk/fsl/
+:* Install method	: Using installer script
+:* Install source	: https://fsl.fmrib.ox.ac.uk
+:* Version		: 2.7.13
+
+* Python 2.7.15 (not complete)
+:* Description		: FSL is a comprehensive library of analysis tools for FMRI, MRI and DTI brain imaging data. - Homepage: http://www.fmrib.ox.ac.uk/fsl/
+:* Install method	: Using installer script
+:* Install source	: https://fsl.fmrib.ox.ac.uk
+:* Version		: 2.7.15
+
+* Python 3.6.5 (not complete)
+:* Description		: FSL is a comprehensive library of analysis tools for FMRI, MRI and DTI brain imaging data. - Homepage: http://www.fmrib.ox.ac.uk/fsl/
+:* Install method	: Using installer script
+:* Install source	: https://fsl.fmrib.ox.ac.uk
+:* Version		: 3.6.5
+
+* BrainVISA 4.4.0 (not complete)
+:* Description		: FSL is a comprehensive library of analysis tools for FMRI, MRI and DTI brain imaging data. - Homepage: http://www.fmrib.ox.ac.uk/fsl/
+:* Install method	: Using installer script
+:* Install source	: https://fsl.fmrib.ox.ac.uk
+:* Version		: 4.4.0
+
+* BrainVISA 4.5.0 (not complete)
+:* Description		: FSL is a comprehensive library of analysis tools for FMRI, MRI and DTI brain imaging data. - Homepage: http://www.fmrib.ox.ac.uk/fsl/
+:* Install method	: Using installer script
+:* Install source	: https://fsl.fmrib.ox.ac.uk
+:* Version		: 4.5.0
+
+* BrainVISA 4.6.0 (not complete)
+:* Description		: FSL is a comprehensive library of analysis tools for FMRI, MRI and DTI brain imaging data. - Homepage: http://www.fmrib.ox.ac.uk/fsl/
+:* Install method	: Using installer script
+:* Install source	: https://fsl.fmrib.ox.ac.uk
+:* Version		: 4.6.0
+
+* BrainVISA_JURECA 4.4.0 (not complete)
+:* Description		: FSL is a comprehensive library of analysis tools for FMRI, MRI and DTI brain imaging data. - Homepage: http://www.fmrib.ox.ac.uk/fsl/
+:* Install method	: Using installer script
+:* Install source	: https://fsl.fmrib.ox.ac.uk
+:* Version		: 4.4.0
+
+* BrainVISA 4.6.0 (not complete)
+:* Description		: FSL is a comprehensive library of analysis tools for FMRI, MRI and DTI brain imaging data. - Homepage: http://www.fmrib.ox.ac.uk/fsl/
+:* Install method	: Using installer script
+:* Install source	: https://fsl.fmrib.ox.ac.uk
+:* Version		: 4.6.0
+
+* Parallel 2016.12.22 (not complete)
+:* Description		: FSL is a comprehensive library of analysis tools for FMRI, MRI and DTI brain imaging data. - Homepage: http://www.fmrib.ox.ac.uk/fsl/
+:* Install method	: Using installer script
+:* Install source	: https://fsl.fmrib.ox.ac.uk
+:* Version		: 4.6.0
+
+* ANTs_extra 2.1.0
+:* Description		: ANTs computes high-dimensional mappings to capture the statistics of brain structure and function.
+:* Install method	: Compiled from source
+:* Install source	: https://stnava.github.io/ANTs/
+:* Version		: 2.1.0
+

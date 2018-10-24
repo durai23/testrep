@@ -1,0 +1,17 @@
+Software,Status,Install method,Install source,Version,Description
+MRtrix 0.3.15,Not working, Compiled from source,https://github.com/MRtrix3/mrtrix3, 3.0_RC3, MRtrix3 provides a set of tools to perform various types of diffusion MRI analyses from various forms of tractography through to next-generation group-level analyses.
+MRtrix 3.0_RC3,Working, Compiled from source,https://github.com/MRtrix3/mrtrix3, 3.0_RC3, MRtrix3 provides a set of tools to perform various types of diffusion MRI analyses from various forms of tractography through to next-generation group-level analyses.
+MRtrix 3.0_amp2response_speedup,Working, Compiled from source,https://github.com/MRtrix3/mrtrix3, 3.0_amp2response_speedup, MRtrix3 provides a set of tools to perform various types of diffusion MRI analyses from various forms of tractography through to next-generation group-level analyses.
+ANTs 2.1.0,Working, Compiled from source,https://stnava.github.io/ANTs/, 2.1.0, ANTs computes high-dimensional mappings to capture the statistics of brain structure and function.
+FSL 5.0.9,Working, Installed by IT on imecas,Check with IT , 5.0.9, FSL is a comprehensive library of analysis tools for FMRI MRI and DTI brain imaging data. - Homepage
+FSL 5.0.11,Working, Compiled from source,https://fsl.fmrib.ox.ac.uk, 5.0.11, FSL is a comprehensive library of analysis tools for FMRI MRI and DTI brain imaging data. - Homepage
+Snakemake 3.13.0,Working, Compiled from source,https://www.anaconda.com/download/, 5.0.11,https://snakemake.readthedocs.io/en/stable/
+Python 2.7.13,Working, Installed by IT on imecas,Check with IT , 2.7.13,https://www.python.org/
+Python 2.7.15,Working, Compiled from source,https://www.anaconda.com/download/, 2.7.15,https://www.python.org/
+Python 3.6.5,Working, Compiled from source,https://www.anaconda.com/download/, 3.6.5,https://www.python.org/
+BrainVISA 4.4.0,Working, Installed by IT on imecas,Check with IT , 4.4.0,http://brainvisa.info/web/index.html
+BrainVISA 4.5.0,Not working, Installed by IT on imecas,Check with IT , 4.5.0,http://brainvisa.info/web/index.html
+BrainVISA 4.6.0,Working, Compiled from source,http://brainvisa.info/web/download.html, 4.6.0,http://brainvisa.info/web/index.html
+BrainVISA_JURECA 4.4.0,Not working,Copying files from JURECA,None, 4.4.0,http://brainvisa.info/web/index.html
+Parallel 2016.12.22,Working, Compiled from source,https://www.gnu.org/software/parallel/, 4.6.0,https://www.gnu.org/software/parallel/
+ANTs_extra 2.1.0,Working, Compiled from source,https://stnava.github.io/ANTs/, 2.1.0, ANTs computes high-dimensional mappings to capture the statistics of brain structure and function.

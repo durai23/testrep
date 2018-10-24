@@ -1,0 +1,10 @@
+Library,Status,Install method,Install source,Version,Description
+pscom,Working,Compiled from source,https://github.com/ParaStation/pscom,5.2.1,https://github.com/ParaStation/pscom
+popt,Working,Compiled from source,http://www.linuxfromscratch.org/blfs/view/svn/general/popt.html,1.16.0,http://www.linuxfromscratch.org/blfs/view/svn/general/popt.html
+Eigen,Working,Compiled from source,http://eigen.tuxfamily.org/index.php?title=Main_Page,3.3.4,http://eigen.tuxfamily.org/index.php?title=Main_Page
+PCRE,Working,Compiled from source,https://www.pcre.org/,8.41,https://www.pcre.org/
+libpng,Working,Compiled from source,http://www.libpng.org/pub/png/libpng.html,1.6.34,http://www.libpng.org/pub/png/libpng.html
+zlib,Working,Compiled from source,https://zlib.net/,1.2.11,https://zlib.net/
+ParaStationMPI,Working,Compiled from source,https://github.com/ParaStation/psmpi,5.2.1,https://github.com/ParaStation/psmpi
+freetype,Not Working,Compiled from source,https://www.freetype.org/,2.8.1,https://www.freetype.org/
+X11 2017.03.14,Working,Copied from JURECA,https://www.x.org,20170314,https://www.x.org

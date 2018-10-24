@@ -1,0 +1,9 @@
+pscom
+popt
+Eigen
+PCRE
+libpng
+zlib
+ParaStationMPI
+freetype
+X11 2017.03.14

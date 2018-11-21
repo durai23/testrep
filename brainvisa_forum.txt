@@ -76,3 +76,8 @@ b) We are not able to specify custom locations for the input and output files an
 b) We are forced to update the database using GUI after the import (step 1) process, thus forcing us to leave the command line and enter into GUI. Then after updating the database (and using the "--enabledb" option) the morphologist process runs successfully.
 
 Is there some way to avoid the 
+
+
+
+
+

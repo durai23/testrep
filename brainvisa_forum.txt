@@ -1,0 +1,83 @@
+#!/bin/bash
+
+subj_nifti_prefix=$1
+dbase=sbr51
+
+python -m brainvisa.axon.runprocess --enabledb ImportT1MRI \
+input=${dbase}/${subj_nifti_prefix}.nii.gz \
+output=${dbase}/subjects/${subj_nifti_prefix}/t1mri/default_acquisition/${subj_nifti_prefix}.nii.gz \
+referential=${dbase}/subjects/${subj_nifti_prefix}/t1mri/default_acquisition/registration/RawT1-${subj_nifti_prefix}_default_acquisition.referential
+
+
+python -m brainvisa.axon.runprocess --enabledb morphologist \
+t1mri=${dbase}/subjects/${subj_nifti_prefix}/t1mri/default_acquisition/${subj_nifti_prefix}.nii.gz \
+perform_normalization=1 \
+anterior_commissure=none \
+posterior_commissure=none \
+interhemispheric_point=none \
+left_hemisphere_point=none \
+t1mri_nobias=${dbase}/subjects/${subj_nifti_prefix}/t1mri/default_acquisition/default_analysis/nobias_${subj_nifti_prefix}.nii.gz \
+histo_analysis=${dbase}/subjects/${subj_nifti_prefix}/t1mri/default_acquisition/default_analysis/nobias_${subj_nifti_prefix}.han \
+split_brain=${dbase}/subjects/${subj_nifti_prefix}/t1mri/default_acquisition/default_analysis/segmentation/voronoi_${subj_nifti_prefix}.nii.gz \
+left_graph=${dbase}/subjects/${subj_nifti_prefix}/t1mri/default_acquisition/default_analysis/folds/3.1/L${subj_nifti_prefix}.arg  \
+right_graph=${dbase}/subjects/${subj_nifti_prefix}/t1mri/default_acquisition/default_analysis/folds/3.1/R${subj_nifti_prefix}.arg \
+perform_sulci_recognition=1 \
+left_labelled_graph=${dbase}/subjects/${subj_nifti_prefix}/t1mri/default_acquisition/default_analysis/folds/3.1/default_session_auto/L${subj_nifti_prefix}_default_session_auto.arg \
+right_labelled_graph=${dbase}/subjects/${subj_nifti_prefix}/t1mri/default_acquisition/default_analysis/folds/3.1/default_session_auto/R${subj_nifti_prefix}_default_session_auto.arg
+
+
+
+
+
+
+
+[quote]Then with the given parameters, you also need to activate databasing because the normalization steps and sulci recognition steps need some additional data which are found in the internal database of brainvisa, so you wil lneed to add the "--enabledb" after "python -m brainvisa.axon.runprocess".[/quote]
+
+Hi Denis,
+
+We have partially solved this problem. Our goal was to run morphologist from the command line. Our current solution is to accomplish this in 3 steps - 
+
+[i]1) run the import process 
+[/i][code]#!/bin/bash
+subj_nifti_prefix=$1
+dbase=sbr51
+python -m brainvisa.axon.runprocess --enabledb ImportT1MRI \
+input=${dbase}/${subj_nifti_prefix}.nii.gz \
+output=${dbase}/subjects/${subj_nifti_prefix}/t1mri/default_acquisition/${subj_nifti_prefix}.nii.gz \
+referential=${dbase}/subjects/${subj_nifti_prefix}/t1mri/default_acquisition/registration/RawT1-${subj_nifti_prefix}_default_acquisition.referential[/code]
+
+[i][b]2) update the database in the GUI
+[/b][/i]
+
+[i]3) run the morphologist with the "--enabledb" option
+[/i][code]#!/bin/bash
+subj_nifti_prefix=$1
+dbase=sbr51
+python -m brainvisa.axon.runprocess --enabledb morphologist \
+t1mri=${dbase}/subjects/${subj_nifti_prefix}/t1mri/default_acquisition/${subj_nifti_prefix}.nii.gz \
+perform_normalization=1 \
+anterior_commissure=none \
+posterior_commissure=none \
+interhemispheric_point=none \
+left_hemisphere_point=none \
+t1mri_nobias=${dbase}/subjects/${subj_nifti_prefix}/t1mri/default_acquisition/default_analysis/nobias_${subj_nifti_prefix}.nii.gz \
+histo_analysis=${dbase}/subjects/${subj_nifti_prefix}/t1mri/default_acquisition/default_analysis/nobias_${subj_nifti_prefix}.han \
+split_brain=${dbase}/subjects/${subj_nifti_prefix}/t1mri/default_acquisition/default_analysis/segmentation/voronoi_${subj_nifti_prefix}.nii.gz \
+left_graph=${dbase}/subjects/${subj_nifti_prefix}/t1mri/default_acquisition/default_analysis/folds/3.1/L${subj_nifti_prefix}.arg  \
+right_graph=${dbase}/subjects/${subj_nifti_prefix}/t1mri/default_acquisition/default_analysis/folds/3.1/R${subj_nifti_prefix}.arg \
+perform_sulci_recognition=1 \
+left_labelled_graph=${dbase}/subjects/${subj_nifti_prefix}/t1mri/default_acquisition/default_analysis/folds/3.1/default_session_auto/L${subj_nifti_prefix}_default_session_auto.arg \
+right_labelled_graph=${dbase}/subjects/${subj_nifti_prefix}/t1mri/default_acquisition/default_analysis/folds/3.1/default_session_auto/R${subj_nifti_prefix}_default_session_auto.arg[/code]
+
+When we follow these 3 steps it works successfully.
+But we have two major issues -
+a) We are forced to use 2 separate processes - one for import and one for morphologist. Can we not specify the input files directly to morphologist process without 
+b) We are not able to specify custom locations for the input and output files and are forced to follow the path structure and file naming convention of the database.
+b) We are forced to update the database using GUI after the import (step 1) process, thus forcing us to leave the command line and enter into GUI. Then after updating the database (and using the "--enabledb" option) the morphologist process runs successfully.
+
+Is there some way to avoid the 
+
+
+
+
+

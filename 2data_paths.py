@@ -30,10 +30,11 @@ print(args.out_file)
 # THIS WORKS JUST REPLACE args.in_folder with drive letter
 # but wont print files in drive immediate base
 # THEN add pandas metadata saving
-def print_paths_and_log_to_csv(in_dir):
+def print_paths_and_log_to_csv(in_dir,out_file):
 	f_count=0
 	cols=['fpath','size','date_created','date_modified']
-	in_dir_base=os.path.basename(in_dir)
+	# in_dir_base=os.path.basename(in_dir)
+	in_dir_base=out_file
 	out_csv=os.path.join("C:",os.sep,"cygwin64","home","synapse","testrep","data_paths",in_dir_base+".csv")
 	out_txt=os.path.join("C:",os.sep,"cygwin64","home","synapse","testrep","data_paths",in_dir_base+".txt")
 	df=pd.DataFrame(columns=cols)
@@ -62,7 +63,7 @@ def print_paths_and_log_to_csv(in_dir):
 # print next(os.walk(args.in_folder))[1]
 # print next(os.walk(args.in_folder))[0]
 # print "first print base path"
-print_paths_and_log_to_csv(next(os.walk(args.in_folder))[0])
+print_paths_and_log_to_csv(next(os.walk(args.in_folder))[0],args.out_file)
 # print "print paths"
 # for i in next(os.walk(args.in_folder))[1]:
 # 	print os.path.join(next(os.walk(args.in_folder))[0],i)

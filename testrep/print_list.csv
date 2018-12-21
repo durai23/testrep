@@ -1,0 +1,21 @@
+disk_path,fname,final_path
+S:\shitheads,shitheads.txt,C:\Users\synapse\Desktop\12_21_2018_data_paths\shitheads.txt
+S:\camstudio\vids,camstudio_vid.txt,C:\Users\synapse\Desktop\12_21_2018_data_paths\camstudio_vid.txt
+S:\camstudio\aud,camstudio_aud.txt,C:\Users\synapse\Desktop\12_21_2018_data_paths\camstudio_aud.txt
+S:\free2x,free2x_FINAL.txt,C:\Users\synapse\Desktop\12_21_2018_data_paths\free2x_FINAL.txt
+S:\s3,s3.txt,C:\Users\synapse\Desktop\12_21_2018_data_paths\s3.txt
+S:\media,media_FINAL.txt,C:\Users\synapse\Desktop\12_21_2018_data_paths\media_FINAL.txt
+S:\pywebcap,pywebcap_FINAL.txt,C:\Users\synapse\Desktop\12_21_2018_data_paths\pywebcap_FINAL.txt
+S:\s3_2,s3_2.txt,C:\Users\synapse\Desktop\12_21_2018_data_paths\s3_2.txt
+S:\s3_s3_2_recovered,s3_s3_2_recovered.txt,C:\Users\synapse\Desktop\12_21_2018_data_paths\s3_s3_2_recovered.txt
+Z:\Screenshots,Screenshots.txt,C:\Users\synapse\Desktop\12_21_2018_data_paths\Screenshots.txt
+Z:\sys_dumps_ul,sys_dumps_ul.txt,C:\Users\synapse\Desktop\12_21_2018_data_paths\sys_dumps_ul.txt
+S:\pylogger,pylogger.txt,C:\Users\synapse\Desktop\12_21_2018_data_paths\pylogger.txt
+P:\consul_vids,consul vids.txt,C:\Users\synapse\Desktop\12_21_2018_data_paths\consul vids.txt
+S:\s3_9,s3_9.txt,C:\Users\synapse\Desktop\12_21_2018_data_paths\s3_9.txt
+S:\mobius,mobius.txt,C:\Users\synapse\Desktop\12_21_2018_data_paths\mobius.txt
+T:\mobius2,mobius2.txt,C:\Users\synapse\Desktop\12_21_2018_data_paths\mobius2.txt
+S:\10_6_2016,10_6_2016.txt,C:\Users\synapse\Desktop\12_21_2018_data_paths\10_6_2016.txt
+S:\9_11_2016,9_11_2016.txt,C:\Users\synapse\Desktop\12_21_2018_data_paths\9_11_2016.txt
+S:\10_9_2016,10_9_2016.txt,C:\Users\synapse\Desktop\12_21_2018_data_paths\10_9_2016.txt
+S:\s4,s4.txt,C:\Users\synapse\Desktop\12_21_2018_data_paths\s4.txt
